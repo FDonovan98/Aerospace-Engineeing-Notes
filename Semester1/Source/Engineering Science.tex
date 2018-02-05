@@ -1,0 +1,400 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{gensymb}
+\usepackage{mathtools}
+
+
+\begin{document}
+\title {Engineering Science (EG-086)}
+\date{}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+	Lecturer: Dr Zak Abdallah works with Rolls Royce University Tech Cantre in materials and research as well as Swansea materials Research and Development \\
+	I am required to email him to make an appointment if i wish to speak with him. I have no thursday lectures and there are no Monday lectures unless explicitly stated.
+	\subsection{Recommended reading}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		\begin{itemize}
+			\item Physics for scientists and engineers : a strategic approach with modern physics / Randall D. Knight.
+		\end{itemize}
+	\subsection{Testing}
+		There are two online assesments worth 25\% in total, with a final exam in January worth 75\%.
+		
+\newpage
+		
+\section{Quantities, Units and Dimesnsions \hfill \date{04/10/18}}
+	\begin{description}
+		\item[Random Error -] Unpredictable and can be reduced by averaging multiple results
+		\item[Systematic Error -] Predictably inaccurate, this is cause by the the measurement device not being calibrated correctly. It is consistently wrong, so, for example, will always be too high.
+	\end{description}
+	
+\newpage
+	
+\section{States of Matter \hfill \date{10/10/17}}
+	\subsection{Kinetic Theory of Matter}
+		\begin{itemize}
+			\item All matter is made of atoms. The electrostatic interaction between between these atoms results in potential energy.
+			\item The average kinetic energy of the atoms/ molecules is the temperature of the substance. As the thermal energy increases the rate of motion of the molecules/atoms increases.
+			\item When in the gaseous state, atoms can move and collide elastically with each other and the surrounding container. The rate of these collisions is refered to as pressure. 
+		\end{itemize}		
+		
+		\[ \text{Potential Energy} + \text{Kinetic Energy} = \text{Internal Energy} \]
+		\\
+		Binding forces exist between atoms which hold them together, these are; Ionic, Covalent, and Metallic bonding. Repulsive electrostatic forces push atoms apart. These are caused by the electrons of each atom repeling each other. \\
+		\par
+		Crystaline solids are very atomicaly uniform, while Amorphous solids have a less uniform structure. \\
+		\par
+		Heat is a measure of Thermal Energy, normally added to a substance. Temperature is the average Kinetic Energy of the atoms. Therefore, Heat $\neq$ Temperature.
+		
+	\subsection{Gas Laws}
+		Boyle's Law states that for a constant temperature: $ \frac{V_1}{P_2} = \frac{V_2}{P_1} $ \\
+		Charles' Law states that for a constant pressure: $\frac{V_1}{T_1} = \frac{V_2}{T_2} $ \\
+		Amonton's Law states that for a constant volume: $\frac{P_1}{T_1} = \frac{P_2}{T_2} $ \\
+		Avogadro's Law states that for a constant pressure and temperature: $\frac{V_1}{n_1} = \frac{V_2}{n_2} $ where n $=$ number of moles \\
+		
+		\newpage
+		
+		\subsubsection{Ideal Gas Law}
+		\begin{align*}
+			PV&=nRT \\
+			\intertext{where:}
+			P &= \text{Pressure} \\
+			V &= \text{Volume} \\
+			n &= \text{number of moles} \\
+			R &= \text{Gas Constant} \\
+			T &= \text{Temperature}
+			\intertext{This can also be written as} 
+			PV&=mRT \\
+			\intertext{Where:}
+			m &= \text{Mass}
+		\end{align*}
+
+	\subsection{Phase Change}
+		Phase $\equiv$ State 
+		\begin{itemize}
+			\item If no phase change is involved, all energy added to matter in the form of heat increases the kinetic energy of the molecules, meaning the temperature increases
+			\item During a phase change the temperature remains fixed until the phase change is complete, despite energy being added through heat.
+			\item All of this energy is used to change the potential energy, while the kinetic energy remains the same
+			\item Both phases are saud to be in thermal equilibrium during this transition
+		\end{itemize}
+		
+\newpage
+		
+\section{Thermal properties of matter \hfill \date{17/10/17}}
+	\subsection{Conduction}
+		Heat flows from the hot region to the colder region without any net movement of the actial substance. This is how heat is transfered through metals. The atoms at the hot end of the metal have a higher average kinetic energy compared to their colder neighbours. They then collide with these neighbours, transfering some of the kinetic energy. \\
+		This occurs most in solids as the atoms are closer together so they collide more. \\
+			\[ Q = kA \frac{T_H - T_C}{L} \]
+			
+		Where: 			
+		
+		\begin{align*}
+			Q &= \text{Heat energy} (W) \\
+			k &= \text{Thermal conductivity coefficient} (\frac{W}{mK}) \\
+			A &= \text{Area heat is being transfered through} \\
+			T_H &= \text{The hot temperature}  \\
+			T_C &= \text{The cold temperature} \\
+			L &= \text{Length (or thinkness) heat is being transferred through} 
+		\end{align*}		
+
+	\subsection{Convection}
+		Convection of heat is transfer of thermal energy from a hotter to a colder region through mass motion of a fluid medium. Natural convection is caused bu density differences in a fluid due to temperature differences.  An exaple of this would be water being heated in a pan, the water at the bottom recieves heat, becomes less dense and rises. The cooler, denser air falls to replace it, and this process then repeates, forming a convection current until all the water is the same temperature. \\
+		Forced convection is where fluid motion is generated by an external source, such as a fan or pump.  \\
+	
+\pagebreak
+
+		\[ Q = hA(T_{body}-T_{surr}) \]
+		Where:
+		\begin{align*}
+			Q &= \text{Heat energy} (W) \\
+			T_{body} &= \text{Temperature of the body} (K) \\
+			T_{surr} &= \text{Temperature of the suroundings} (K) \\
+			A &= \text{The area that heat is being transfered away from} (m^2) \\
+			h &= \text{Convection heat transfer coefficient} (\frac{W}{m^2 K})
+		\end{align*}		
+		
+	\subsection{Radiation}	
+		Radiation is heat transfer by electromagnetic waves with no intervening medium. Warmth recieved from the sun, from glowing coals, or from an electric buld is all through radiation.  While radiation heat transfer can occur through a fluid (such as air) it doesn't require one, unlike the other methods of heat transfer. \\
+		When thermal radiation hits a substance it can either be absorbed, transmitted (passes through), or reflected by it. And substance that is a good emmitter tends to be a good absorber, and visa versa. Mirrored or polished surfaces are poor at this while matt black surfaces are good. A substance that absorbs all alectromagnetic radiation is called a black body.\\
+		The transfer of thermal radiation is described by Stefan's law, such that:
+		\[Q = \epsilon \sigma AT^4 \]
+		Where:
+		\begin{align*}
+			Q &= \text{Heat energy} (W) \\
+			T &= \text{Temperature of the body} (K) \\
+			A &= \text{The area heat is being transfered from} (m^2) \\
+			\sigma &= \text{The Stefan-Boltzmann constant} (5.67*10^{-8} \frac{W}{m^2 K^4}) \\
+			\epsilon &= \text{The emissivity of the object (between 0 and 1)}
+		\end{align*}
+				
+	\subsection{Heat Capacity}
+		Heat capacity is the the amount of energy required to raise the temperature of an object by unit quantity (1K or 1\degree C). This is dominant when no phase change is involved. \\
+
+		\[Q=C\Delta T\]
+		Where:
+		\begin{align*}
+			Q &= \text{Heat energy} (J) \\
+			C &= \text{Specific heat coefficient} (\frac{J}{K}) \\
+			\Delta T &= \text{Change in temperature} (K)
+		\end{align*}
+
+		Specific heat capacite is the amount of energy required to raise 1Kg of a substance by 1\degree K. \\
+		\[Q= mC_s\Delta T \]
+		Where:
+		\begin{align*}
+			Q &= \text{Heat energy} (J) \\
+			C_s &= \text{Specific heat capacity} (\frac{J}{kg K}) \\
+			\Delta T &= \text{Change in temperature} (K)
+		\end{align*}
+					
+	\subsection{Latent Heat}
+		Latent heat (L) is the amount of energy absorbed or released when a phase change occurs. \\
+		The heat supplie can be calculated useing:
+		\[Q = mL\]
+		Where:
+		\begin{align*}
+			Q &= \text{Heat energy} (J) \\
+			m &= \text{Mass of Substance} (kg) \\
+			L &= \text{Latent heat of the substance} (\frac{J}{kg})
+		\end{align*}
+		
+		\textbf{Latent Heat of Fusion ($L_f$)} is the amount of energy absorbed through heat when unit mass of a substance changes from solid to liquid. \\ \\
+		\textbf{Latent Heat of Vapourisation (L$_v$)} is the amount of energy absorbed through heat when unit mass of a substance changes from liquid to gas. \\ \\
+		\textbf{Latent Heat of Sublimation (L$_s$)} is the amount of energy absorbed through heat when unit mass of a substance changes from solid to gas.
+					
+\newpage
+
+\section{Thermodynamics}
+	There are three different types of systems in thermodynamics. These describe how an object interacts with its surroundings. These types of systems are: \\
+	\par
+	\begin{tabularx}{\linewidth}{l l l}
+		\textbf{Isolated} & \textbf{Closed} & \textbf{Open} \\
+		No matter can transfer & No matter can transfer & Matter can transfer \\
+		No heat can transfer & Heat can transfer & Heat can transfer \\
+	\end{tabularx}
+	\par
+	
+	\subsection{Work}
+		Work can be defined as the energy transfer produced by the action of a force. 
+		\begin{align*}
+			W &= F\Delta x
+			\intertext{Where:}
+			W &= \text{Work Done} \\
+			F &= \text{Force} \\
+			x &= Distance \\
+		\end{align*}
+		Using $F=PA$ and subbing in $W=F\Delta x$ for $F$ gives \\
+		\begin{align*}
+			W &=PA\Delta x \\
+			&=P\Delta V
+			\intertext{Where:}
+			P &= \text{Pressure} \\
+			A &= \text{Area} \\
+			V &= \text{Volume}
+		\end{align*}
+		
+			
+	
+	\subsection{P-V Diagram}
+		The P-V diagram relates the pressure (P) to the volume (V). The work done is the area under the P-V diagram. This means that if P is constant and V is chagning then the work is:
+		\[W = P \Delta V \]
+		
+		If V is constant while P is changing, then $\Delta V = 0$, meaning the work done is:
+		\[W = P \Delta V = 0 \]
+		 
+		 If both P and V are changing, then the work is:
+		 \[W = \int \! P \, \text{d}V \]
+		 
+	\subsection{Laws of Thermodynamics}
+		\subsubsection{The First Law}
+			This law defines the relationship between internal energy ($\Delta U$) of a system and exchange of energy with the environment in the form of heat (Q) and work (W). \\
+			The total energy entering a system through heat (Q) is used both to change the internal energy ($\Delta U$) and work done (W) on the environment by the system. 
+			\[Q= \Delta U + W \rightarrow \Delta U = Q - W \]
+			
+			Q is positive if heat is added to the system while W is positive if work is generated by the system. \\
+			\par
+			When a system changes from an initial state to a final state it passes through a series of intermidiate states, called a path. The work done by a system is dependant not only on the initial and final state, but also on the path taken. Similarly the amount of heat entering or exiting the system also depends on the path taken.
+						
+		\subsection{Thermodynamic Process}
+		\[Q = \Delta U + W \]
+			\begin{description}
+				\item[Adiabetic - ] A process where Q = 0
+				\item[Isothermal - ] A process where T = constant
+				\item[Isobaric - ] A process where P = constant
+				\item[Isochoric - ] A process where V = constant
+				\item[Cyclic - ] A process that returns to its original state
+			\end{description}
+	\subsection{Heat Engine}
+		The cyclic process allows the conversion of one form of energy (heat) into another (work). This process forms the basis for conversion of thermal energy from burning fuel into mechanical work. All engines that burn a substance are heat engines. \\
+		Each cycle a heat engine absorbs heat (Q$_1$) from a hot reservoir at a high temperature. Some of this is converted into mechanical work (W) while the remaining heat (Q$_1$) is discarded into the cold reservoir. In a complete cycle the system returns to its original state, so $\Delta U = 0$. The net work done by the engine can be defined as 
+		\[W=Q_1 - Q_2 \]
+		\par
+		All heat engines are less than 100\% efficient. The thermal efficiency $\eta$ of a heat engine is defined as the ratio of work output to heat input where \\
+		\begin{align*}
+			\eta &=\frac{W}{Q_1} \\
+			\intertext{Or} \\
+			\eta &= 1- \frac{Q_2}{Q_1} \\
+		\end{align*}
+		
+	\subsection{Carnot Cycle}
+		The efficiency of a petrol engine is around 20\% while a diesel engine is about 30\%. The most efficient heat engine is the theoretical carnot cycle, a cyclic process consisting of two isothermal and two adiabatic processes. This cycle is purely theoretical as it describes a perfect engine, we can use it to find the upper limits on the efficiency of heat engines. 
+		
+		\begin{figure}
+			\includegraphics{"carnot cycle".png}
+		\end{figure}
+				
+\newpage
+
+\section{Electrostatics \hfill \date{31/10/17}}
+	The fundamental electric charge is that on an electron (an electron volt). Charge can be induced on certain objects by conduction or friction, such as by rubbing a glass rod with a silk cloth. This is because the silk cloth tears electrons away from the glass rod. The unit of charge Q ia a coulomb, C.\\
+	\subsection{Coulombs law}
+		The magnitude of the electrostatic force, F, between two point charges, Q$_1$ and Q$_2$, is directly proportional to the product of their charges and inverslty proportional to the square of their seperation, r.
+		\[F=k\frac{Q_1Q_2}{r^2} \]
+		Or
+		\[F = \frac{1}{4\pi \epsilon _0} \frac{Q_1Q_2}{r^2} \]
+		Where: \\
+		$k = 9.0 *10^9 \quad Nm^2C^{-2} $ \\
+		$\epsilon _0 (\text{permittivity}) = 8.85 *10^{-12} \quad C^2N^{-1}m^{-2}$ \\
+		\par
+		It is important to ignore the sign of the charges when using these equations. \\
+		The direction of the force is dependant upon the charges of the points (positives repel each other etc.). The charge of an electron is a constant, $Q_\text{electron} = 1.6*10^{-19} \quad C$
+	\subsection{Principle of Superposition}
+		Coulombs law only gives the force on a charge due to one other charge. If several charges are present you need to resolve forces horizontally (F$_H$) and vertically (F$_V$) and then find the resultant (R) and the direction ($\Theta$) of the net force.
+		\[R=\sqrt{F^2_H + F^2_V} \qquad \Theta = tan^{-1} \left( \frac{F_V}{F_H} \right) \]
+
+\pagebreak
+
+	\subsection{Electric Fields}
+		Electric fields are measured in Newton per Coulomb (N/C). If a second charge, $Q_2$ is placed near the first charge $Q_1$, it it experiences a force exerted by the electrical field of $Q_1$. From coulombs law we can calculate the electric field at a distance $r$ from a single point charge:
+		\[ E=k\frac{Q}{r^2} \qquad \text{Or} \qquad E = \frac{1}{4\pi \epsilon _0} \frac{Q}{r^2} \] 
+	
+	
+\newpage
+
+\section{Electricity}
+	\subsection{Electric Current}
+		In order for charge to move between two points there needs to be a p.d. between the points and there should be a carrier material (a conductor connecting the two points). Metals are good conductors due to their cloud of free electrons that can carry charge. The amount of charges moving per unit time is call the `electric current'.
+		\begin{align*}
+			I &= \frac{Q}{t} \\
+			\intertext{Where: }
+			I &= \text{current } (A) \\
+			Q &= \text{charge } (C) \\
+			t &= \text{time } (s)
+		\end{align*} 
+		
+	\subsection{Electric Resistivity and Resistance}
+		Electrons will move when ther is a p.d. present in a closed circuit. This motion will involve collisions and this results in resistance and heating within the conducting wire. This is refered to as resisitivity which is a material property. 
+		\begin{align*}	
+			R &= \rho \frac{L}{A} \\
+			\intertext{Where: }
+			R &= \text{Resistance} \\
+			\rho &= \text{Resistivity} \\
+			L &= \text{Length of wire} \\
+			A &= \text{Cross sectional area}  
+		\end{align*}
+
+		As the temperature increases, the resistivity and the resistance increases. If $\delta$T is small then the resistivity is:
+		\begin{align*}
+			\rho_T &= \rho_0 ( 1+\alpha(T-T_0)) \\
+			\intertext{Where: }
+			\rho_T &= \text{Final resistivity} \\
+			\rho_0 &= \text{Resistivity at } T_0 \\
+			T_0 &= \text{Start temperature} \\
+			\alpha &= \text{Coefficient of resistivity}
+		\end{align*}
+		
+		If you multiply both sides by $\frac{L}{A}$ you get
+		\begin{align*}
+			R_T &= R_0 ( 1+\alpha(T-T_0)) \\
+			\intertext{Where: }
+			R_T &= \text{Final resistance} \\
+			R_0 &= \text{Resistance at } T_0 \\
+			T_0 &= \text{Start temperature} \\
+			\alpha &= \text{Coefficient of resistivity}
+		\end{align*}
+		
+		The definition of resisitance (Ohms law) is the ratio between the voltage drop (V) across it and the current (I) through it
+		\[ R=\frac{V}{I} \]
+		Ohms law states the ``the current through an ohmic conductior is directly proportional to the p.d. across it, provided there is no change in the physical condition (such as temperature)''
+		
+	\subsection{DC Circuits}
+		Direct current circuits are circuits in which the current only flows in a single direction. For any combination of ohmic resistors you can find a single equivalent resistor to replace them. Resistors can be arranged either in series or in parallel, and these both have different equations for finding the total resistance. \\
+		\par
+		For resistors in series the total resistance is 
+		\[R_T = R_1 + R_2 + ... \]
+		For resistors in parallel, the total resistance is 
+		\[ \frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + ... \]
+		
+\newpage
+
+\section{Optics - Rays and Radiation \hfill \date{21/11/17}}
+	\subsection{Laws of Refraction}
+		\begin{align*}
+			n & = \frac{c}{v} \\
+			\intertext{Where: }
+			n &= \text{Refractive index} \\
+			c &= \text{Speed of light} \\
+			v &= \text{Speed of light in the material}
+		\end{align*}
+			
+\newpage
+
+\section{Optics - Lenses and Mirrors}
+	\subsection{Curved Mirrors}
+
+		Curved mirrors can be concave or convex. When a beam strikes a curved mirror each ray is reflected following the laws of reflection, where all the reflected rays meet is known as the focal point (F). \\
+		In concave mirrors F is real, meaning the reflected light will converge on the side of the mirror that the rays came from. In convex mirrors F is virtual, meaning the reflected rays will converge on the other side of the mirror.
+		
+		\subsubsection*{DIAGRAM HERE}
+		
+		\begin{align*}
+			F &= \text{The 'Focal Point'} \\
+			C &= \text{The 'Centre of Curvature' of the mirror} \\
+			P &= \text{The 'Centre Point' of the mirror, also called the 'Pole'} \\
+			N &= \text{The 'Point of Reflection' of the ray at the mirror surface}
+		\end{align*}
+	
+		The distance $CP$ is the 'Radius of Curvature', $r$, of the mirror. This line is also called the 'Principle Axis' or the 'Optical Axis' of the mirror. The distance $FP$ is the 'Focal Length', $f$, of the mirror ($f=\frac{r}{2}$).
+		
+		\subsubsection{Ray Diagrams}
+			Ray diagrams help to identify the size and position of an object located against a curved mirrpr. This method involves drawing a few rays diverging from a point in the object and tracing the rays after they've reflected from the mirror. \\
+			There are four rays, callled principle rays that can be drawn easily, and any two of them are needed to locate the image:
+			\begin{enumerate}	
+				\item Passes through $C$
+				\item Moves horizontally, hits $N$ and reflects through $F$
+				\item Passes through $F$ and reflects horizontally 
+				\item Hits $P$ and reflects at the same angle
+			\end{enumerate}
+		
+			\subsubsection*{DIAGRAM HERE}
+			
+			\begin{align*}
+				h_0 &= \text{Length of the object} \\
+				h_i &= \text{The size of the image} \\
+				f &= \text{The distance $FP$} \\
+				v &= \text{The distance from the image to $P$} \\
+				u &= \text{The distance from the real object to $P$} 
+			\end{align*} 		
+			
+			Instad of using the graphical methods, the mirrors formula can be used to lace the image in both concave and convex mirrors. 
+			\[ \frac{1}{u}+\frac{1}{v} = \frac{1}{f} = \frac{2}{r} \]
+			
+			
+			
+			
+			
+			
+			Linear magnification, $m$, is given by
+			\[ m=\frac{h_i}{h_0}=-\frac{v}{u} \]
+			
+			When $m$ is positive then the image is upright (has the same orientation as the object), when negative the image is inverted. If $|m|> 1$ then the image is enlarged, while if $|m| < 1$ the image is reduced.
+			
+	\subsection{Lenses}
+		Lenses are usually made from spherical glass. In a converging lens the central section is thicker than the rim. Such a lens allows incident parallel light rays to converge following refraction. A diverging lens has a thiner central section compared to the rim 
+		
+\end{document}
