@@ -1,2 +1,0 @@
-# Uni
-University notes
