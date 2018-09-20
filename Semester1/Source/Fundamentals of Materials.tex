@@ -1,0 +1,757 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{mhchem}
+\usepackage{pgf}
+\usepackage{chemfig}
+\usepackage{sidecap}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+
+
+\begin{document}
+	\title{Fundamentals of Materials (EG-080)}
+	\date{}
+	\maketitle
+	
+	\tableofcontents
+	
+	\newpage
+	
+	\section*{Introduction}
+	\addcontentsline{toc}{section}{Introduction}
+		Lecturer Dr Shirin Alexander, available in room 204 ESRI building. Office hours are Friday 1-3pm, although she needs to be emailed before you turn up. 
+
+	\subsection{Recommended Reading}
+		\begin{itemize}
+			\item Chemistry : molecules, matter, and change / Peter Atkins, Loretta Jones.
+			\item General Chemistry E2 *Free*Aie by BELLAMA
+			\item Engineering materials 1 : an introduction to properties, applications and design / Michael F. Ashby and David R. H. Jones.
+			\item Materials science and engineering : an introduction / William D. Callister, Jr.
+		\end{itemize}
+	
+	\subsection{Testing}
+		There will be three Blackboard tests, worth a total of 25\%, each test being worth 8\%, 9\%, and 8\% respectively. There will also be a final exam in January worth 75\%
+	
+	\newpage		
+	\section{Atoms and Elements}
+		\begin{description}
+			\item [Matter -] Has volume and mass 
+			\item [Substance -] A pure form of matter, containing only a single type. For example, pure water 
+			\item [Element -] A substance composed of a single kind of atom 
+			\item [Isotope -] An atom with the same atomic number but a different molecular weight
+			\item [Homogenous Mixture -] A solution that will naturally seperated if left 
+			\item [Heterogeneous Mixtures -] A mixture of substances that require a physical technique to seperate
+		\end{description}
+		
+		\subsection{Atomic Configuration}
+			Proton Mass (Positive) = $1.67\times10^{-24}$ \\
+			Neutron Mass (Neutral) = $1.67\times10^{-24}$ \\
+			Electrons (Negative) = $9.11\times10^{-28}$ \\
+			
+			\ce{^{A}_{Z}X} \\
+			Where: \begin{description}
+				\item [Z - ] Is the atomic number, the number of protons
+				\item [A - ] Is the atomic weight, the total number of protons and neutrons
+				\item [X - ] Is the atomic symol
+			\end{description} 
+			
+	
+			
+			Quantum numers for an atoms electrons can be used to calculate properties of the electrons, such as their energy
+			\begin{description}
+				\item [n - ] Principal quantum number (or Shell number) represents the energy of the electron. The greater n, the higher the shells energy level and the weaker it's bound to the nucleus
+				\item [l - ] Orbital angular quantum number. This specifies the shape of the orbital
+				\item [m$_l$ - ] Magnetic quantum number. This specifies the indivdual orbital of a particular shape and is also associated with the orbital direction
+			\end{description}
+			
+			The number of electrons that an occupy a single shell is $2n^2$ 		
+
+			\begin{figure}[t]
+				\includegraphics[width=\textwidth]{"Electron orbitals".jpg} 
+				\caption{The different possibilities for s, p, and d orbitals}
+			\end{figure}
+			
+		\subsection{Implications of Quantum Physics}
+			\begin{itemize}
+				\item Electrons can only occupy discrete orbitals
+				\item Orbitals have different energies, shapes and directions
+				\item There are only a maximum of 2 electrons per orbital (spinning opposite ways)
+				\item Electrons will fill empty shells first before doubling up
+				\item Orbitals are clouds of probablility, not true orbits
+				\item Orbitals can be represented using a number for the energy level and a letter for the shape. For example 1s, 2p, 3d 
+			\end{itemize}
+			
+			Electrons in electron shells can be represented using written notation. For example, Mg $= 1S^2 2S^2 2p^6 3S^2$. This can be written shorthand by using the previous nobel gas to represent complete shells. For example, Mg $=[Ne] 3S^2$
+			\newpage
+			\clearpage
+			
+			\begin{figure}[!ht]
+				\includegraphics[width=\textwidth]{"Energy levels of orbitals".png}
+				\caption{}
+			\end{figure}
+
+			\begin{figure}[!ht]
+				\includegraphics[width=\textwidth]{"Filling orbitals".png}
+				\caption{}
+			\end{figure}
+			
+			\begin{figure}[!ht]
+				\includegraphics[width=\textwidth]{"Orbital diagram".png}
+				\caption{This diagram can be used to show how electrons fill shells. Within each row electrons will always g to an empty box before filling a box completely. These boxes represent the different options withing each shell layer (reference Figure 1)}
+			\end{figure} 
+			
+			\begin{figure}[!ht]
+				\includegraphics[width=\textwidth]{"Exceptions".png}
+				\caption{These are the exceptions to these rules. They may ask about the highlighted ones}
+			\end{figure}
+			
+			\clearpage
+			\newpage
+			
+	\section{Atomic Bonding}
+		The Valence Electrons (VE) of an atom are the electrons in the outer shell of an atom, so are the ones involved in forming bonds to adjacent atoms. Lewis symbols and be used to show the valence electrons in an atom. For example, \lewis{0.2.4.6.,C} \\
+		Atoms aim to gain stability by gaining or losing electrons with an aim to gain the same electronic configuration of the closest (in terms of atomic number) noble gas. The interaction of atoms through chemical bonding leads to an overall decrease in the energy. The energy is stored as potential energy. \\
+		\par
+		Ionic and covalent are terms used to describe two extremes of chemical bonds. In most substances the bonds lie between purely covalent or covalent. When describing bonds between non-metals covalent bonding is a good metal, while when the bond is between metals and non-metals ionic bonding is a good model.
+		\subsection{Ionic Bonding}
+			Ionic bonding occurs when one atom looses at least one electron from its valence band to another atom to gain stability. Atoms that undergo ionic bonding become positively/ negatively charged.
+			
+			\subsubsection*{Salt, NaCl}
+
+				\begin{tabular}{l l}
+				 	$ \text{Na} = 1s^2, 2s^2, 2p^6, 3s^1 $ & \lewis{0.,Na} \\
+				 	$ \text{Cl} = 1s^2, 2s^2, 2p^6, 3s^2, 3p^5 $ &  \lewis{0:2:4.6:,Cl} \\
+				\end{tabular}
+				
+				For Na and Cl the third shell holds the valence electrons. Na loses one electron while Cl gains it, producing Na$^{^+}$ \lewis{0:2:4:6:,Cl}$^{^-}$ \\
+				\par
+				Ionic solids tend to stack together in regular crystalline structures as the charged electrons in the molecule atract to the other charged atoms in other molecules. This strong electrostatic attraction between oppositely charged ions in ionic solids accounts of their typical properties such as high melting and boiling points, as well as brittleness. \\
+				When an ionic solid is hit the positive ions that normally line up with negative ions now line up with positive ions, forcing the lattice apart. This is why ionic solids are brittle. \\ 
+				In the lattice strong coulomb forces ionically bond each Na$^+$ ion to six neighbouring Cl$^-$, meaning it takes a lot of energy to break all of these bonds. This accounts for the high melting and boiling points. 
+				\par
+				The ionisation energy of an atom increases as its position in the periodic table moves down and to the right. This is based on the distance of the nucleus to the valence shell.
+				
+		\subsection{Covalent Bonding}
+			Covalent bonding occurs when pairs of valence electrons are shared between two atoms. This means that neither atom gains or loses any charge. Non-metal elements tend to interact via covalent bonding (instead of ionic) because their ionisation energy is too high. \\
+			Covalent bonds are very strong; it takes a large amount of energy to seperate atoms bonded in this way. For example, diamond is 100\% covalent bonds, while graphite is only partially covalent.
+			\subsubsection*{Hydrogen}
+				\begin{tabular}{l l l}
+					$\text{H} = 1s^2 $ & \lewis{0.,H} & \lewis{4.,H} \\
+				\end{tabular}
+				\newline
+				Hydrogen wants to be as stable as the closest noble gas, Helium. The sum of attractive electrostatic forces (nucleus $\leftrightarrow$ electrons) and repulsive electrostatic forces (electron $\leftrightarrow$  electron, nucleus $\leftrightarrow$ nucleus) it overall attractive therefore bonding occurs. \\
+					\begin{center}
+						\lewis{0.,H} \space \space \lewis{4.,H} $\rightarrow$ \lewis{0:,H} H $\rightarrow$ \chemfig{H - H}
+					\end{center}
+				
+				Here the two hydrogen atoms share their bond, resulting in a single covalent bond being formed.
+			
+				
+			\subsubsection*{Water}
+			
+				\begin{tabular}{l l}
+					$\text{H} = 1s^2 $ & \lewis{0.,H} \\
+					$\text{O} = 1s^2, 2s^2, 2p^4$ & \lewis{0:2.4:6.,O} \\	
+				\end{tabular}
+				
+				\begin{center}
+					\lewis{0.,H} \space \space \lewis{0.2:4.6:,O} \space \space \lewis{4.,H} $\rightarrow$ H \lewis{0:2:4:6:,O} H $\equiv$ \chemfig{H - \lewis{2:6:,O} - H}
+				\end{center}
+					
+				The presence of the doublet of negative electrons the two hydrogens are squeezed together as the two doublets repel from each other. This force results in water having a bond angle of 104.5\degree. The oxygen atom pulls on the shared electrons in each hydrogen, meaning one side of the molecule is positively charged and the other side is negatively charged. This means it is a polar molecule. \\
+				In liquid water these partial charges cause weak electrostatic attraction between molecules, called hydrogen bonds, that keep the molecules together.
+				 
+		\subsection{Electronegativity}
+		
+		\begin{figure}[!ht]
+			\includegraphics[width = \textwidth]{"Electronegativity".png}
+		\end{figure}
+			Electronegativity defines the power of an atom in a bond to draw electrons from the other atom.  We can use the difference in electronegativity between two elements to predict the most appropriate bonding model for a chemical bond between them. In general, if the electronegativity difference, x, between the two elements is: 
+			\begin{align*}
+				x \geq 1.7 &\rightarrow \text{Ionic Bond} \\
+				x < 0.5 &\rightarrow \text{Covalent Bond} \\
+				0.5 \leq x < 1.7 &\rightarrow \text{Polar Covalent Bond} 
+			\end{align*}		
+		\newpage
+				
+	\section{Metallic Bonding}
+	
+		\begin{description}
+			\item[Delocalisation - ] When an electron is freed from its orbital
+			\item[Malleable - ] Can be pressed to form sheets
+			\item[Ductile - ] Can be stretched to form wires
+		\end{description}
+		
+		Metallic bonding can be explained according to the Drude model, which is a simplistic model. It was developed to explain the transport of electrons in metals, although does not explain all of their electronic properties. \\
+		\par
+		The drude model assumes a 'sea of free, vibrating, electrons' which are rebounding off of heavier, relatively immobile ions. Valence electrons are free to drift through the entire metal as they are not bound to any single atom, while the nonvalence electrons and the atomic nuclei form the ion cores. \\
+		When metallic atoms come close the valence electrons become delocalised as orbitals overlap and lose energy. This loweres the overall energy and holds the atoms together, forming the sea of free electrons, or "Drude Glue". 
+		
+		\subsection{Metallic properties within the Drude model}
+			\subsubsection*{Partially explains melting points}
+				The overall energy is lowered significantly when the atoms are close together so a lot of energy needs to be added to seperate them. The electrons are homogeneously shared, meaing there is a strong bonding between metal atoms. This gives metals their solid structure. \\
+				The more outer electrons an atom has the more "Drude Glue" there is between atoms, meaning there is a higher melting points, although this is only true to a certain extent. Some examples:
+				\begin{itemize}
+					\item Sodium (1s$^2$, 2s$^2$, 2p$^6$, 3s$^1$ ): 98\degree C 
+					\item Magnesium ([Ne] 3s$^2$): 650\degree C
+					\item Aluminium ([Ne] 3s$^2$, 3p$^1$): 660\degree C
+				\end{itemize}
+				
+				There are exeptions to this, such as mercury ([Xe] 4f$^{14}$, 5d$^{10}$, 6s$^2$) which has very weak atomic interaction, so very little Drude Glue.
+				
+			\subsubsection*{Explains conductivity}
+				The outer electrons are free to move so can carry electric charge (current). Also, the more valence electrons there are the higher the conductivity. Valence electrons also carry heat through vibrations, so metals are good thermal conductors. 
+				
+			\subsubsection*{Explains shininess}
+				When a photon of light hits a metal surface, knocks an electron up to one of the many empty orbitals of a higher energy. This electron is unstable so drops back down, re-emitting the energy as a photon identical to the first. This is called reflection. 
+				
+			\subsubsection*{Explains malleabitily}
+				Metallic bonding is non-directional, so atoms can move along slip planes by a small a amount. As long as the atoms stay close together the metallic bonds stay in place, meaning metals can be deformed.
+				
+		
+		\newpage
+		
+	\section{Introduction To Metals}
+		\begin{description}
+			\item[Smelting - ] A process where metals are extracted from an ore by using a combination of heat and a reducing agent. 
+			\item[Monoatomic - ] A stable molecule composed of a single atom (such as nobel gases)
+		\end{description}
+		
+		\subsection{Crystalline vs Amorphous}
+		
+			\begin{itemize}
+				\item Atoms in a crystalline material are in a repeating/ orderly array over large atomic distances.
+				\item All metals (and many ceramics) form crystalline structures
+				\item Amorphous materials are characterised by no/ very little ordering of their atoms. Their layout is random
+			\end{itemize}
+			
+			Crystalline materials have a small energy difference between the conduction band and the valence band, while amorphous materials have a large energy diference. This is why amorphous materials are insulators, while crystaline materials are conductors or semiconductors.
+			
+			\subsection{How atoms in a metal stack}
+				There are three main ways in which atoms stack -
+				\begin{itemize}
+					\item Hexagonal close packing (HCP)
+					\item Cubic close/ face-centered cubic packing (CCP/ FPP)
+					\item Body-centered cubic packing (BCC)
+				\end{itemize}
+				
+				This stacking controls the ductility, electronic and magnetic properties of metals.
+				
+				\begin{description}
+					\item[Coordination Number - ] The number of near neighbours, at equal distance, to a central atom in a crystal				
+					\item[Packing Density - ] The fraction of space filled by the atoms (assuming the atoms are perfect spheres)
+					\item[Unit Cell - ] The smallest hypothetical unit that when stacked together repeatedly with no gaps will produce an entire crystal
+				\end{description}
+				
+				\subsubsection*{Hexagonal Close Packing (HCP)}
+					
+					\begin{figure}[!ht]
+						\includegraphics{"HCP".png}
+					\end{figure}
+					
+					\begin{itemize}
+						\item Each atom is surrounded by 6 others in each layer
+						\item Coordination number of 12
+						\item 74 \% packing density
+						\item 3 slip systems
+						\item Examples - Magnesium, Zinc
+					\end{itemize}
+
+				\subsubsection*{Cubic Close Packing (CCP)}
+					\begin{figure}[!ht]	
+						\includegraphics{"FCC".png}
+					\end{figure}
+					
+					\begin{itemize}
+						\item Each atom is surrounded by 6 others in each layer
+						\item Coordination number of 12
+						\item 74 \% packing density
+						\item 12 slip systems (4 slip planes, 3 directions)
+						\item Examples - Aluminium, Copper, Gold
+					\end{itemize}
+					
+				\subsubsection*{Body Centred Cubic (BCC)}
+					\begin{figure}[!ht]
+						\includegraphics{"BCC".png}
+					\end{figure}
+					
+					\begin{itemize} 
+						\item More open structure
+						\item Coordination number of 8
+						\item 68 \% packing density
+						\item 48 slip systems (but planes are not closely packed, so more force is required)
+						\item Examples - Iron, Sodium, Potassium
+					\end{itemize}
+					
+		\subsection{Slip in metals}
+			Metals deform in planes, with one plane of atoms sliding over another plane.  Atoms want to stay as close to eachother as possible, meaning slip is easiest on closely packed planes in closely packed directions. \\
+			A slip system describes the set of symmetrically identical slip planes and the associated family of slip directions for which dislocation motion can easily occur and lead to plastic deformation. 
+			\subsubsection*{HCP}
+				HCP has only one close packed plane, with three directions, so three slip systems. This means it is limited to slipping only if force is applied in certain directions. In most cases, it is quite brittle. 
+			
+			\subsubsection*{CCP/ FCC}
+				CCP has four close packed planes, each with three close packed directions, so 12 slip planes. It can slip in many arrangements, meaning it is ductile. 
+				
+			\subsubsection*{BCC}
+				BCC has the most slip systems (up to 48) but the planes are not tightly packed, meaning a higher force or higher temperature is needed. 
+				\begin{figure}[!h]
+					\includegraphics{"Plane Slip".png}
+				\end{figure}
+
+		\subsection{Plastic vs Elastic Deformation}
+		
+			\begin{figure}[!ht]
+				\includegraphics{"Deformation".png}
+			\end{figure}
+			
+			Elastic deformation is one is which stress and strain are directly proportional. The deformation is also reversible. The equation for elastic deformation is 
+			
+			\begin{align*}
+				\sigma &= E \epsilon \\			
+				\intertext{Where:} 			
+			 	\sigma &= \text{Stress} \\
+				E &= \text{Young's modulus} \\
+				\epsilon &= \text{Strain} \\
+			\end{align*}
+			
+			Plastic deformation is one in which stress and strain are no longer proportional. This deformation is not reversible.
+			
+			\begin{figure}[!h]
+				\includegraphics[width = \textwidth]{"Plastic Deformation".png}
+			\end{figure}
+			
+		\subsection{Ductile vs Brittle}
+			\begin{description}
+				\item[Ductility - ] A measure of the extent of plastic deformation a material can sustain before fracture; a ductile metal can be stretched into a wire without breaking
+				\item[Malleability - ] The ability of a solid to deform under pressure
+				\item[Brittle - ] A material is brittle is it fractures at less than $\sim$5\%strain
+			\end{description}
+			
+
+			\begin{figure}
+				\includegraphics[width = 0.40\textwidth]{"Ductile vs Brittle".png}
+			\end{figure}
+
+			Brittle metals have very clean breaks when they fracture, while malleable metals will deform and tear before they break. \\
+			Metals can change from ductile to brittle, for example below 912\degree C Iron and steel transform from CCP to BCC, from ductile to brittle. \\
+		
+	\pagebreak
+	
+	\section{Properties of metals}
+		\subsection{Metallic Grains}
+			As a metal starts to solidify crystals start growing in many different directions. These crystals merge, giving the metal a grain structure. Every grain has its own crystalline orientation. 
+			
+			\begin{wrapfigure}{l}{0.5\textwidth}
+				\caption{Orientation map of an Inconel 600 superalloy sample (Ni- based corrosion resistant alloy)}
+				\includegraphics[width=0.5\textwidth]{"Grain Boundaries".png}
+			\end{wrapfigure}
+		
+			Slip is difficult across a grain boundary. Smaller grains means more boundaries, reducing slip so forming a harder/ stronger metal. Small grains can be obtained by fast cooling, use of a chemical agent (such as a very strong acid), or through physical treatment, like ultrasounds. \\
+			Reducing slip in a metal makes the metal harder, normally stronger, but sometimes more brittle. There are two ways to make it harder for atoms to slip, these are:
+			\begin{itemize}
+				\item Alloying
+				\item Decreasing the grain size
+			\end{itemize}
+			
+			\hfill \\
+			
+			\subsubsection*{Alloying}
+				\textbf{Alloy - } An alloy is a metallic substance which is composed of two or more elements with a metallic structure. 
+				\par
+				A mix of differently sized atoms makes it harder for atoms to slip over each other, the the more alloying the harder it is for atoms to slip. For example: \\
+				\par
+				\begin{tabularx}{\linewidth}{X X}
+					Mild steel -0.15\% Carbon & Cast iron - 4\% Carbon \\
+					Malleable and ductile & Much harder and brittle \\
+					Used for rolled structural sections (tubes, round bars etc.) & Used in foundaries to make complex objects \\
+				\end{tabularx}
+				
+				Interstitial alloying is where the alloying atoms fit between the metal atoms, such as carbon in steel. Substitutional alloying is where the alloying atoms replace the other metal atoms, such as in Brass with Copper and Zinc.
+				
+			\subsubsection*{Decreasing the grain size}
+				Grain size can be decreased through chemical treatment, such as an acid wash, or through the use of ultrasound as the metal solidifies. Smaller grains notmally lead to stronger metals, although in high temperature applications, such as in a jet turbine, small grains are actually unwanted. This is because a T-induced slip or failure can occur along grain boundaries. For these applications, it is better to reduce the density of grain boundaries, ideally aiming for a single crystal microstructure, meaing the metal is a single crystals, therefore has no grain boundaries.
+
+		\subsection{Advanced Materials}
+			\subsubsection*{Metallic Glass}
+				This is a metal but with a disordered, non-crystalline structure, the same as glass. This provides high strength, high elastic limit, high corrosion resistance, resistance to scratches, dents, or wear. It does however make the metal brittle, although less brittle than mineral glass (normal glass, SiO$_2$).
+			\subsubsection*{Shape-Memory Alloys}
+				This is an alloy that 'remembers' its original shape, so that when it is deformed it returns to its original shape upon heating. These alloys have applications in industries such as automobile, aerospace, and robotics.
+		
+		\subsection{Choosing a Metal}
+			There are five main things to consider when deciding if a metal is appropriate for use. These are:
+			\begin{itemize}
+				\item Is it suitable for the task (strength, chemical stability)? 
+				\item Is it abundant as an ore?
+				\item Is it easy to extract and purify?
+				\item Is it cheap (This is a combination of the above two)?
+			\end{itemize}			
+						
+	\newpage
+	
+	\section{The Chemical Behaviour of Metals}
+		How stable and how easy to extract a metal is is mainly determined by oxidation and reduction. These are the most common types of chemical reaction and they normally occur together, with one chemical oxidising while another reduces. This is a redox reaction, and the system hosting both the reactions is called a redox system
+		
+		\subsection{Oxidation}
+			Oxidation is a chemical reaction associated with a loss of electrons (remember OIL RIG). Within our environment this normally involves oxygen, although not always. Any chemical which causes oxidation is known as an oxidising agent. Metal corrosion is an oxidation reaction. \\
+			Examples: \\
+			\ce{Metal \rightarrow Metal^{n+} + ne^-} \\
+			\ce{Fe \rightarrow Fe^{2+} + 2e^-} \\
+			\ce{Fe^{2+} \rightarrow Fe^{3+} + e^-} \\
+
+		\subsection{Reduction}
+			Reduction is a chemical reaction associated with the gain of electrons (again, remember OIL RIG). Any chemical which causes the reduction of another is known as a reducing agent. The extraction of metals from ores is done through the reduction of metals. \\
+			Examples: \\
+			\ce{Metal^{n+} + ne^- \rightarrow Metal} \\
+			\ce{Cu^{2+} + 2e^- \rightarrow Cu} \\
+			\ce{Al^3+ + 3e^- \rightarrow Al}
+			
+	\newpage
+			
+	\section{Electrochemical Potential}
+		Electrochemical potential is an alternative way of measuring the oxidising/ reducing power of elements. It is a measure (J/ mol) of the chemical potential of a compound which takes electrostatic forces into account. \\
+		It can be used to understand; the use of electricity to extract metals, corrosion, batteries, and fuel cells. It also provides another way to predict the occurremce of redox chemical reactions. 
+		
+		\subsection{Standard Potential}
+			The standard potential is an electrochemical potential which measure the ability of compounds to oxidize/ reduce other compounds in comparison to the H$^+$/ H$_2$ redox couple under standard conditions. Standard potential (E$^0$) is in volts and the sign and magnitude is is an indication of a substance to act as a reducing or oxidizing agent. \\
+			\ce{2H^+ + 2e^- \rightarrow H_2(g)} = 0V \\
+			
+			\begin{figure}[!h]
+				\includegraphics[width=\textwidth]{"Standard Potential".png}
+			\end{figure}
+			\pagebreak
+			By convention, the standard potential is associated to a reduction reaction: \ce{M^{n+} + ne^- \rightarrow M} where M represents a metal. E$^0$ = E$^0_{red(uction)}$. This equation can be shown as E$^0_{red}$(M$^{n+}$/M) = Standard potential (V). For example: \\
+			\ce{E^0_{red}(Cu^{2+}/Cu) = +0.34V} \\
+			\ce{E^0_{red}(Zn^{2+}/Zn) = -0.76V} \\
+			\par
+			If E$^0_{red}$ $>$ 0 Then M$^{n+}$ tends to be reduced by H$_2$(g): \\
+			\ce{M^{n+}(aq) + H_2(g) \rightarrow M(s) + 2H^+(aq)} \\
+			\par
+			If E$^0_{red}$ < 0 Then M$^{n+}$ tends to reduce H$^+$(aq): \\
+			\ce{M(s) + 2H^+(aq) \rightarrow M^{n+}(aq) + H_2(g)} \\
+			\par
+			For example: \\
+			\ce{Cu^{2+} + H_2 \rightarrow H^+ + Cu} \\
+			\ce{Zn^{2+} + H^+ \rightarrow Zn + H_2} \\
+			
+			For a redox reaction the total voltage produced is $E_{red} - E_{ox}$
+			
+		\subsection{Group Metals}
+			\subsubsection*{Group 1}
+				Very reactive, strong reducing agent, and soft with low melting points
+			\subsubsection*{Group 2}
+				Less reactive than group 1, weaker reducing agents, they are harder and have higher melting points. 
+			\subsubsection*{Group 3}
+				Weaker reducing agents than group 2 and not very reactive. They are harder and have higher melting points (due to more "drude glue")
+			
+		\subsection{Transition Metals}
+			Transition metals are metals with partially filled d-orbitals. This controls many properties of transition metals and make the elements all behave similarly. They generally engage in strong bonding as atoms are small and heavy. They are also not very reactive due to their valence electrons having a high ionization energy. They have more than one oxidation state and often show catalytic activity.
+				
+	\newpage				
+	
+	\section{Extraction of Iron, production and corrosion of steel}
+	
+	
+	\newpage
+	
+	\section{Aluminium}
+		Aluminium is a light-weight metal that is mechanically stronger than group one and two metals, has a higher melting point and is less reactive (as there is more 'Drude Glue'). It is the most common metallic element in the Earth's crust, and the third most abundant of all the elements, after oxygen and silicon.
+		
+		\subsection{Aluminium Extraction vs Iron Extraction}
+			Aluminium is a good reducing agent, better than iron, meaning it is difficult to reduce it chemically in an economic way
+			\[ \ce{Al^3+ + 3e- \rightarrow Al} \qquad E=-1.66v \]
+			\[ \ce{Fe^2+ + 2e- \rightarrow Fe} \qquad E=-0.44v \]
+			For aluminium it is more economically viable to use electrolysis, in which electricity is used to force the reduction reaction. 
+			
+		\subsection{Electrolysis}
+			Electrolysis uses a direct current to force a non-favourable reaction to occur. Cations migrate to the cathode where they are reduced while anions migrate to the anode where they are oxidised. \\
+			Electrolysis requires the reacting material to allow movement of charged ions, however solid \ce{Al2O3} (alumina) doesn't allow this as the atoms are in a fixed position. A solution of the material would normally be used, but alumina doesn't easily dissolve in anything. Melting the material would also work, although the metling point of alumina is 2050 \degree C, so this is impractical. \\
+			\par
+			The solution is to decompose the alumina into molten cryolite (\ce{Na3AlF6}), which occurs at about 950 \degree C. The flouride here lowers the melting point of the cryolite-alumina mix, allowing the alumina to dissolve in the molten cryolite, meaning it can conduct electricity. 
+			\begin{figure}[!ht]
+				\centering
+				\includegraphics[width=0.5\textwidth]{"Alumina Electrolysis".png}
+			\end{figure}
+			\\
+			\par
+			At the graphite cathode:
+			\[ \ce{2Al2O3 \rightarrow 4Al + 3O2} \qquad E_{red}=-1.66v \]
+			At the graphite anode:
+			\[ \ce{6O^2- \rightarrow 3O2 (g) + 12e-} \qquad E_{ox}= -0.3v \]
+
+			The lifetime of these graphite anodes is only 20-28 days, meaning that they need to be replaced every 28 days as the carbon gradually burns away and reacts with oxygen. Modern cells operate between 4.0-4.5 volts, and between 150,000 and 300,000 amps! A single cell can normally produce 1-2 tonnes of aluminium per day.
+			
+			\subsection{Economical considerations}
+				Aluminium extraction is very expensive as it requires a lot of electrical power (3 moles of e$^-$ to produce 1 mol of Al), meaning the plants are normally located nearby cheap electricity, such as hydroelectric. It is also costly due to the replacing of the graphite rods, the fabrication of cryolite, and the transport of bauxite (aluminium ore). \\
+				Recycling Al requires around 5\% of the energy needed to extract it from bauxite, making recycling incredibly valuable. Unfortunately 58\% of cans go to landfill in Europe, around 45000 tonnes of Aluminium cans go to landfill in the UK per year.
+				
+		\subsection{Properties of Aluminium}
+			Aluminium has stronger bonds than group one or two metals as the atom is smaller and there is more Drude glue. This means it is harder, has a higher melting point, is more dense, and is a good conductor of heat and electricity.
+			
+	\newpage
+	
+	\section{Extraction and Corrosion of Other Metals}
+		The more reactive a metal the higher its tendancy to bond with other elements, so the harder it is to extract
+		
+		\subsection{Group One and Two}
+			Group one and two metals are very reactive, having only one or two valence electrons, meaning they tend to occur as salts such as sodium chloride and magnesium chloride. These metals are extracted using electrolysis as they are some of the strongest reducing agents so they can't be chemically reduced. \\
+			When electrolyising these salts we must start with molten salt, not just a salt solution, such as sea water in the case of sodium chloride. This is becaise the easiest reaction (the one which requires less energy) will always occur first, so using sea water we would just reduce the water to hydrogen, not reduce the sodium.
+			\begin{align*}
+				\ce{Na+ + e- \rightarrow Na} \qquad &-2.71v \\
+				\ce{2H2O + 2e- \rightarrow H2 + 2OH-} \qquad &0.00v
+			\end{align*}
+			
+			These metals also corrode incredibly easily because of how reactive they are. 
+
+		\subsection{Transition Metals}
+			Iron is the most important because of how much it is used. Nearly all of these can be etracted by chemical reduction of an ore.
+			\subsubsection*{Copper}
+				Copper occurs mainly as sulphides (\ce{Cu2S} and \ce{CuFeS2}) and has a ccp structure, making it very maleable. It is also an excellent electrical and thermal conductor. \\
+				In extraction, crushed ore is seperated from excess rock using froth flotation. In this process, the copper ore is mixed with water and stirred by a agitator. Air is then bubbled through, along with a small amount of alcohol which binds to the copper sulphide, allowing it to bind to the air bubbles and float to the surface where it can then be scraped off. The process is shown below.
+				\begin{figure}[!h]
+					\includegraphics[width=0.5\textwidth]{"Froth Floatation".png}
+				\end{figure}
+				
+				This copper is then extracted from its ore using either high temperatures (air roasting) or using an aqueous solution with electrolysis.\\
+				Copper has catalytic properties and slowly corrodes to form a green outer later which then protects it from further corrosion. It can be used to make various alloys:
+				\begin{itemize}
+					\item Brass (10-50\% Zinc)
+					\item Bronze (22\% Tin, 9-16\% Aluminium)
+					\item Cupro-nickel coins (with Nickel)
+					\item Gold blends (5-30\% Copper in Gold to lower the carat, making it cheaper and harder
+				\end{itemize}
+				
+			\subsubsection*{Titanium}
+				Titanium is a relatively abundant element, but on its own it is not very strong, although is quite light. When alloyed with tin, aluminium or vandium it has high strength and is quite ductile, meaing it's widely used for strong, tough and light alloys. However, because of the extraction process it is quite expensive. \\
+				\par
+				The main titanium ores are rutile (\ce{TiO2}) and ilmenite (\ce{FeTiO3}), although rutile is scarcer and more expensive than ilmenite it is more commonly used as it doesn't contain iron compounds so is easier to process. When processing rutile it is first converted to titanium(IV) chloride, which is then reduced to titanium using either magnesium or sodium. \\
+				\par
+				Like copper, titanium has catalytic properties. It also should corrode but, like aluminium, forms a thin stable, self-healing, corrosion-resisitant layer of \ce{TiO2} that protects the metal. \\
+				\ce{TiO2} is very white so is widely used as a pigment and whitener in paint. \\
+				It is as strong as steel but less dense, and can withstand very high temperatures. This gives it a lot of uses in the fabrication of aircraft, space craft and missiles.
+				
+\newpage
+
+\section{Non-Metallic Elements and Compounds}
+	\subsection{Primary and Secondary bonds}
+		Atoms have two types of bonds, primary and secondary bonds. Primary bonds are strong, short range and include Covalent, Ionic and Metallic bonds, while secondary bonds are weak, long range and include Polar/ Hydrogen bonds and Van der Walls bonds. Primary bonds are rarely pure bonds, and most compounds are partially one type of bonding and partially another type. \\
+		\par
+		\begin{tabularx}{\textwidth}{X X}
+			\textbf{Pure Covalent} & \textbf{Pure Ionic} \\
+			Between atoms of the same group or element & Between group one, two and seven \\
+			Very strong, directional bonds & Strong, non-directional bonds \\
+			Insoluble in water & Soluble in water \\
+			Some form giant structures with very high melting points & High(ish) melting points \\
+			Others form isolated molecules with very low melting points & \\
+			 & \\
+		\end{tabularx}
+	
+		\begin{tabularx}{\textwidth}{X X}
+			\textbf{Ionic with some Covalent} & \textbf{Covalent with some Ionic} \\
+			Between groups two, three (metals) and five and six (non-metals) & Between different atoms (non-metals) \\
+			Higher strength bonds than Ionic & Quite strong directional bonds \\
+			More directional bonds than pure Ionic & Partially soluble in water \\
+			Less soluble than pure Ionic & Polar molecules \\
+			Higher metling points than pure Ionic solids & 
+		\end{tabularx}
+		
+
+		
+\newpage
+
+\section{Secondary Bonding}
+	The behaviour of gases is often non-ideal, meaning that the relationships between pressure, volume and temperature are not accurately described by the ideal gas law, $PV=nRT$. \\
+	Cohesion is used when describing intermolecular forces while adhesion is used to describe when a foreign object interacts with the molecules in a substance. These forces explain capillary action. 
+	\begin{description}
+		\item[Surface Tension] - The elastic tendency of liquids which makes them acquire the least surface area possible
+		\item[Capillary Action] - The ability of a liquid to flow in narrow spaces without the assistance of external forces, such as gravity
+		\item[Vapor Pressure] - The pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases at a certain T in a closed system
+		\item[Miscibility] - The property of substances to mix in all proportions to form a homogenous solution (for example water and oil are immiscible as they wont mix)
+		\item[Solubility] - The ability for a substance, called the solute, to dissolve in a solvent
+	\end{description}
+	
+	\subsection{Bonding Strength}
+		\subsubsection*{Primary Bonding}
+			\begin{tabularx}{\textwidth}{X X X X}
+				\textbf{Force} & \textbf{Basis of Attraction} & \textbf{Energy (Kj/mol)} & \textbf{Example} \\
+				Ionic & Cation-anion & 400-4000 & NaCl \\
+				Covalent & Nuclei-shared e$^-$ pair & 150-1100 & \ce{H-H} \\
+				Metallic & Cations-delocalised electrons & 75-1000 & Fe
+			\end{tabularx}		
+			
+		\subsubsection*{Secondary Bonding}
+			\begin{tabularx}{\textwidth}{X X X}
+		\textbf{Force} & \textbf{Basis of Attraction} & \textbf{Energy (Kj/mol)} \\
+		Ion - dipole & Ion charge - dipole charge & 40-600 \\
+		H bond & Polar bond to \ce{H-} dipole charge & 10-40 \\
+		Dipole - dipole & Dipole charges & 5-25 \\
+		Ion-induced dipole & Ion charge - polarised \ce{e-} cloud & 3-15 \\
+		Dipole-induced dipole & Dipole charge - polarizable \ce{e-} cloud & 2-10 \\
+		Dispersion & polarizable \ce{e-} clouds & 0.05-40 
+	
+	\end{tabularx}
+	
+\section{Properties of Non-Metallic Elements}
+	\subsection{Groups 1, 2, 3 (except Boron) and transition metals}
+		All of these have metallic bonding and across the periods, as the number of electrons increases the melting point, conductivity and strength all increase as there's more Drude glue.
+
+	\subsection{Metalloids of groups 3, 4 and 5}
+		These all have giant covalent structures, have very high melting points and are very strong. Most are semi-conductors and have a low level of conductivity
+		
+	\subsection{Carbon}
+		Carbon can have one of three crystalline forms, all of which are giant structures 
+		\subsubsection{Diamond}
+			Incredibly hard, often used as a cutting tool and an abrasive. It has a completely covalent giant structure, giving it poor electrical conductivity because of the strong covalent bonds. However it is a good thermal conductor due to the rigid giant covalent structure.
+		\subsubsection{Graphite}
+			A layered structure with very strong covalent bonds within the layers and weaker Van der Waals bonding between the layers. This allows some electrical conductivity and allows the layers to slip, meaning it can act as a lubricant and pencil lead.
+		\subsubsection{Buckminster Fullerene}
+			Carbon atoms are arranged in a football shape, and the structre has similar bonding to that in graphite. It can be made into tubes and has potentially useful electrical, chemical, and lubricant properties.
+	
+	\subsection{Non-metals of groups 5, 6 and 7}
+		These are small molecules with strong intramolecular covalent bonding, meaning they are not conductors as all electrons are stongly fixed in these bonds. Most elements form pairs of atoms, such as \ce{N2}, \ce{O2}, \ce{F2}, although some do form larger molecules (\ce{P4}, \ce{S8}). Their intermolecular bonding is weak however due to weak Van der Waals force, meaning they have low melting points. 
+		
+	\subsection{Group 8}
+		These are the nobel gasses, and they are isolated, inert atoms. They become liquid at very low temperatures due to the weak Van der Waals bonding. 
+		
+\newpage
+
+\section{Carbon, Oil and Lubricants}
+	\subsection{Sources of organic chemicals}
+		\subsubsection*{Crude Oil}
+			Crude oil is a major source of organic compounds. It is a mixture of hydrocarbons, mainly alkanes along with some alkenes and aromatic compounds. These are used for fuel and in grease, asphalt, polymers and pharmaceuticals.
+		\subsubsection*{Natural gas}
+			Is mainly methane with some other alkanes, such as ethane, propane, butane and pentane. It is used as fuel	and in fabric, paint and plastics.
+		\subsubsection*{Coal}
+			Coal is primarily carbon but also contains aromatic compounds and heavier alkanes. It is used in fuel and tar (which is used to prevent wooden ships from rotting)
+		\subsection*{Plants}
+			These are natural sources for sugars, alcohols, natural oils and polymers (cellulose and rubber). They are used in fuel, polymers and pharmaceuticals.
+		\subsubsection*{Waste Plastics}
+			Plastic is a sustainable source of recyclable materials which contains hydrocarbons and aromatics.
+
+	\subsection{Oil}
+		Oil is aquatic in origin and is believed to be formed from marine plants. The oldest reserves are found in sedimentary rocks over a billion years old. Above the oil there is a layer of natural gas , and these can both be contained within the pores of the rock, like a sponge. Above the porus rock is a layer of non-porous rock that traps the oil and gas.
+		\subsubsection{Extraction}
+			\begin{description}
+				\item[Primary Recovery (5-15\%)] - This method harvests the natural flow of the oil
+				\item[Secondary Recovery (20-40\%)] - The oil cavern is flooded with pressurised water from one side which forces oil out of the other side
+				\item[Tertiary recovery (50-60\%)] -Can use gas injection where very high pressure gas is injected in to force oil out; steam or hot water can also be used. This method can also use a chemical method using polymer and surfactant.
+			\end{description}
+			
+		\subsubsection{Refining}
+			\begin{description}
+				\item[Paraffins] - (straight or branched alkanes ) : gases (methane, lightest), liquids (few to many C atoms) or some very thick waxes and tars (very large molecules with many C atoms, heaviest).
+				\item[Aromatics] - Benzene rings with chains attached, normally liquid
+				\item[Cycloalkanes] - Ringed alkanes, normally liquid
+				\item[Single Alkenes] - One double bond, can be either liquid or gas
+				\item[Di-enes and Alkynes] - More than one double or triple bond, can be either liquid or gas
+			\end{description}
+		
+
+						
+			\subsubsection{Fractional Distillation}
+			
+				\begin{enumerate}
+					\item Crude oul is heated to around 400\degree C in an inert atmosphere (no oxygen, otherwise it would explode)
+					\item Most components evaporate and the gasses move to the top of the column
+					\item The column gets cooler towards the top
+					\item Different fractions condense back to liquids at different heights dependant on their boiling point
+					\item These fractions are then collected separately
+				\end{enumerate}
+				
+			
+				\begin{figure}[!ht]
+					\includegraphics{"fractional distillation".jpg}
+				\end{figure}
+				
+				\newpage
+				\clearpage		
+			
+				Most fractions from the distallation column are not used directly, they must be further processed to make useful fractions. This further processing can include:
+				\begin{itemize}
+					\item[-] Further fractional distallation and selective dissolution
+					\item[-] Unification which combines small molecules to make larger ones
+					\item[-] Cracking which is the breaking of large alkanes into smaller alkanes, alkenes and alkynes. It involves heating lerger alkanes to high temperatures (around 800\degree C) which breaks some \ce{C-C} bonds. The products of this process are highly dependant on the temperature used.
+				\end{itemize}
+				
+\newpage
+
+\section{Polymers}
+	A polymer is a large molecule, or macromolecule, composed of many repeated subunits, known as monomers. These are made up of long chain molecules with covalently bonded atoms. Polymers are created using a technique known as polymerisation, where many monomers are combined. They are often based on a carbon backbone, with two main types, synthetic polymers, such as plastic, and natural biopolymers, such as DNA and proteins. \\
+	Polymers can be subdivided into thermoplastics or thermosets, depending on how they react to heat.	
+	\subsection{Raw materials}
+		Synthetic polymers can contain raw materials from many different sources, such as: \\
+		\par
+		
+		\begin{tabularx}{\textwidth}{l X}
+			Natural Sources & - Natural Rubber \\
+			& - Cellulose \\
+			& - Frementation of plants \\
+			& \\
+			Oil and Gas & - Currently the main source \\
+			& \\
+			Coal & - Used extensively in the mid 1950's but has now been replaced with oil and gas \\
+			& \\
+			Recycled Plastics & - Being used more, although there are still some challlenges \\
+		\end{tabularx}
+		
+	\subsection{Thermoplastics}
+		Thermoplastics have discrete chains with no primary bonds between the chains, so they are held together only by secondary bonds and physical entanglement. These soften and melt on heating, as the secondary bonds break, and harden on cooling in a reversible process. This allows thermoplastics to be shaped and recycled. They are generally softer and more flexible, and some common thermoplastics include polyethylene, polypropylene, nylon, polystyrene and PVC.
+		
+	\subsection{Thermosets}
+		These are an infinite network of chains which have primary bonding at cross-linking points. When heated these crosslinks and some main chain bonds break, but do not reform when cooled. This means thermosets don't melt but instead degrade. This cross-linking provides good strength and stiffness to higher temperatures than thermoplastics and have good chemical and heat resistance, making them useful for insulation and car parts. They are made by mixing liquid or soft solid components which crosslink and harden when they react, because this process cannot be reversed they cannot be recycled. Thermosets include epoxies and polyesters. 
+		
+	\subsection{Rubbbers (Elastomers)}
+	These are a type of thermoset. The chains are crosslinked but there are much fewer crosslinks than in regular thermosets, and these crosslinks are provided through vulcanization. These chains are much more flexible and the few number of crosslinks provides a memory effect so it returns to its original shape after being deformed. This crosslinking is normally achieved through the addition of sulphur to chains of thermosets. 
+	
+	\subsection{Crystallinity}
+		Thermoplastics can be either amorphous or semi-crystalline materials, while thermosets are always amorphous.
+		\subsubsection{Amorphous Thermoplastics}
+			Most clear plastics, such as acrylic and polycarbondates are amorphous thermoplastics, and these have no long-range structural order. When they cool from a liquid molecular motion is essentially 'frozen out' due to either:
+			\begin{itemize}
+				\item Them cool too fast for crystallisation as the molecules need time to rearrange in an ordered fashion in a crystal
+				\item The structure is too complex for crystallisation as an ordered arrangement becomes difficult
+			\end{itemize}
+			Both of these conditions can also occur in the same material. \\
+			\par
+			This means that these materials have a random, glassy structure with no major secondary bonds between chains. Their entanglement provides their strength, they have good impact resistance and high stiffness.
+			\begin{description}
+				\item[Glass Transition Temperature (Tg)] - When a polymer is cooled below this temperature it becomes hard and brittle, like glass, as the motion of chain molecules freezes out significantly. 
+			\end{description}
+			This transition is not as sudden as a melting point, unless the material is a crystaline polymer, and is affected by the type of polymer. The higher the Tg the stiffer the chains and the more energy is needed to move the chains. If an amorphous polymer has a $Tg > T_{amb}$ it will be a hard solid while if $Tg < T_{amb}$ it will be soft and rubbery. This difference means some polymers are used above their Tg while others are used below their Tg. \\ 
+			A flexible polymer will have a very low Tg, while one that is stiffer will have a higher Tg. The flexibility of the chains is determined b their chemical structure. For example flexibility decreases with \ce{C=C} or \ce{C-O-C} bonds as they are rigid and don't allow twisting or rotation in the molecule. Large side groups also decrease flexibility while a non-carbon backbone, such as silicons or sulphur based polymers, increase the flexibility. \\
+			Some examples of amorphous thermoplastics are: \\ \\
+			\begin{tabularx}{\textwidth}{l X}
+				\textbf{Name} & \textbf{Uses} \\
+				Polystyrene & - Cheap mouldings and packaging foams \\
+				PMMA (Polymethyl mathacrylate & - Known as acrylic, used in windows and light covers \\
+				PVC & - Packaging, window frames and pipes \\
+				Polycarbonate & - Tough glazing, electrical goods (tough and strong due to rigid \ce{C-O-C} bonds and aromatic chain groups, with a high Tg of 145-150\degree C)
+			\end{tabularx} 
+			
+		\subsubsection{Semi-Crystalline Thermoplastics}
+			The materials have some regions where the chains are arranged in a regular crystalline manner with the chain folding and stacking on itself. Secondary bonds between the chains in these regions provide the strength. These materials have a definate melting point, Tm. 
+			\begin{figure}[!ht]
+				\includegraphics[width=0.48\textwidth]{"semicrystal".png}
+			\end{figure}
+			Between the crystalline regions the chains are arranged in a random manner, forming an amorphous region. Chains extend between the two regions, providing mechanical strength. \\
+			\begin{figure}[!ht]
+				\includegraphics[width=0.48\textwidth]{"AmorVsCryst".png}
+			\end{figure}
+			\newline
+			Factors affecting the melting point:
+			\begin{itemize}
+				\item Flex
+			\end{itemize}
+			
+			Some examples of semi-crystalline thermoplastics are: \\ \\
+			\begin{tabularx}{\textwidth}{l X}
+				\textbf{Name} & \textbf{Uses} \\
+				Polyethylene & - Packaging, bottles and toys \\
+				Polypropylene & - Casings, crates and pipes \\
+				Nylons & - Gears, zips, wheels and casings
+			\end{tabularx}
+	
+	
+\end{document}
