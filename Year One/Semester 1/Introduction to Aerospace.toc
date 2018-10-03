@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{3}
-\contentsline {subsection}{\numberline {1.1}Assessment}{3}
-\contentsline {subsection}{\numberline {1.2}Office Hour}{3}
-\contentsline {subsection}{\numberline {1.3}Reading}{3}
