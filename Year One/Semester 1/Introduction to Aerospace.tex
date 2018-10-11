@@ -1,10 +1,12 @@
 \documentclass[12pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage{gensymb}
+\usepackage{amsmath}
 
 \begin{document}
 
-\title{Intro To Aerospace}
+\title{Introduction To Aerospace}
 \date{}
 \maketitle
 
@@ -29,7 +31,118 @@
 		\begin{itemize}
 			\item Introduction to Flight by John D. Anderson Jr.
 		\end{itemize}
+		
+\newpage
 
+\section{The Atmosphere}
+	The atmosphere is constantly changing with varying temperature and pressure.
+	
+	\subsection{The International Standard Atmosphere (ISA)}
+		A standard atmosphere was created so that aircraft and aircraft engines could be compared under the same conditions. \\
+		The ISA represents average conditions in North America and Europe and is based on the assumptions that:
+		\begin{itemize}
+			\item Air is a perfect gas
+			\item Air is dry
+			\item Gravity doesn't change with altitude
+			\item That hydrostatic equilibrium exists
+		\end{itemize}
+		These assumptions are all innacurate but are close enough.
+		
+	\subsection{Regions}
+		The atmosphere is divided into four regions.
+		\begin{itemize}
+			\item Troposphere
+			\begin{itemize}
+				\item Around 11km in height
+			\end{itemize}
+			\item Stratosphere
+			\begin{itemize}
+				\item 11km to 53km
+			\end{itemize}
+			\item Mesosphere
+			\begin{itemize}
+				\item 53km to 105km
+			\end{itemize}
+			\item Thermosphere
+			\begin{itemize}
+				\item Up to 400km
+			\end{itemize}
+		\end{itemize}
 
+	\subsection{Equation of State}
+		\[p=\rho RT\]
+		For a perfect gas R is constant, therefore:
+		\[\frac{p}{p_{sls}}=\frac{\rho}{\rho_{sls}}\frac{T}{T_{sls}}\]
+		So, the above equation can be written as 
+		\[\delta = \sigma \theta \]
+		
+	\subsection{Lapse Ratios}
+		\subsubsection{Temperature}
+			Within the troposphere there is a temperature lapse rate of -6.5\degree C per km, meaning for every kilometer you go above sea level the temperature drops by 6.5\degree C. 
 
+			\begin{align*}
+				T &= 288.15-6.5*10^{-3}h \\
+				\theta &= 1-2.2558*10^{-5}h 
+				\intertext{Where:}
+				T &= \text{Temperature (\degree K} \\
+				\theta &= \text{Temperature Ratio} \\
+				h &= \text{Height (m)}
+			\end{align*}						
+			
+		Outside of the troposphere the Outside Air Temperature (OAT) is -56.5\degree C and remains at this temperature until around 25km.
+		\begin{align*}
+			T &= 216.65 \\
+			\theta &= 0.7519
+		\end{align*}
+		
+		\subsubsection{Pressure}
+			The variation of pressure is determined by combining the Equation of State and the intergration of the Hydrostatic Equation.
+			\[ \delta p=-\rho gh\]
+			
+			Within the troposphere:
+			\[ \delta =(1-2.2558*10^{-5}h)^{5.25588} \]
+			
+			Within the lower stratosphere:
+			\[\delta =0.22336e^{1.7346-1.5769*10^{-4}h} \]
+			
+		\subsubsection{Density}
+			We can combine the Equation of state and the equations for temperature and pressure lapse ratio to give
+			\begin{align*}
+			\sigma &= \frac{\delta}{\theta} \\
+			\sigma &= \frac{-\rho gh}{1-2.2558*10^{-5}h}
+			\end{align*}
+			
+			
+	\subsection{The Speed of Sound}
+		The speed of sound can also be known as the local sonic velocity, which is defined as "the speed at which a small disturbance propagates through air", varies according to the temperature lapse ratio.
+		\begin{align*}
+			a&=a_{sls}\sqrt{\theta}
+			\intertext{Where:}
+			a&=\text{Speed of Sound} \\
+			a_{sls}&=\text{Speed of Sound at Sea Level}
+		\end{align*}
+		At sea level the speed of sound is 340.3 m/s.
+		\subsubsection{Mach Number}
+			The mach number can be found using
+			\begin{align*}
+				M&=\frac{V}{a}
+				\intertext{Where:}
+				M &=\text{Mach Number} \\
+				V&=\text{Local Speed of the Object} \\
+				a&=\text{Local speed of sound}
+			\end{align*}
+			The local speed is also known as the True Air Speed (TAS).
+			
+	\subsection{Reynolds Number}
+		The reynolds number is dimensionless and can help us predict flow patterns. A low reynolds number means that the flow tends to be laminar (stable), while a high reynolds number means that the flow is turbulent (unstable). A turbulent flow can form eddy currents which churn up the flow, using energy and increasing the chances of cavitation. \\
+		The reynolds number is usually defined as 
+		\begin{align*}
+			Re&=\frac{\rho LV}{\mu}=\frac{LV}{v}
+			\intertext{Where:}
+			L&=\text{Length} \\
+			V&= \text{Velocity} \\
+			\mu&=\text{Dynamic Viscosity} \\
+			v&=\text{Kinematic Viscosity}
+		\end{align*}
+			
 \end{document}

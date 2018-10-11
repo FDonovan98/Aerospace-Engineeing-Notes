@@ -1,13 +1,19 @@
 \documentclass[12pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{tabularx}
 
 
 \begin{document}
 
 \title{Engineering Skills}
-\date
+\date{}
 \maketitle
+
+\newpage
+
+\tableofcontents
 
 \newpage
 
@@ -23,6 +29,105 @@
 			\item CV - 10\%
 			\item Bloodhound Group Report and Performance Analysis - 50\%
 		\end{itemize}
+		
+\newpage
 
+\section{Uncertainty}
+	When given the initial design brief for an aircraft there are a lot of factors that you need to consider when creating and evaluating the initial concepts. For example, when designing a commercial transport aircraft you would have to consider the payload, the range, fuel consumption, the type of airframe (monoplane, biplane, blended wing) etc. Only rough estimates, based primarily on engineering judgement, can be made until the plane is fully designed and/ or built.
+	
+	\subsection{Qualitative Down Selection}
+		This is the first step towards designing an aircraft from a design brief, and consists of three steps.
+		\begin{enumerate}
+			\item Make a (long) list of initial concepts
+			\begin{itemize}
+				\item Allow even apparently crazy options
+				\item Do not pre judge any concept
+			\end{itemize}
+			\item Score all concepts in a way that:
+			\begin{itemize}
+				\item Captures engineering judgement from all disciplines
+				\item Applies the same criteria to all concepts
+				\item Formally captures the reasoning for rejecting or keeping a concept in the evaluation
+			\end{itemize}					
+			\item Use the scores to select the best candidates, giving a shortlist for \textbf{quantitative} analysis
+		\end{enumerate}
+		
+		Few, if any, calculations are needed during this stage.
+		
+	\subsection{Decision Matrix}
+		A design matrix can be used to assess the suitablility of a concept or design choice. \\
+		To create a decision matrix you must first list the factors affecting the design, then assign each of these a weight, which signifies their importance. The higher the weight the more important they are. Next, assign each concept a score for each of these factors, with a higher score being better. The total score of the concept can be found using
+		\[ \text{Total} = \sum \text{Weighting}*\text{Score} \]
+		
+		An example for different types of landing gear: \\
+		
+		\begin{tabularx}{\textwidth}{c | c c c}
+			Design Factors & Weighting & Tricycle & Taildragger \\
+			\hline
+			Weight & 0.1 & 3 & 5 \\
+			Drag Effeciencies & 0.1 & 2 & 5 \\
+			Stability & 0.2 & 5 & 1 \\
+			Total & 1 & 1.5 & 1.2 \\
+		\end{tabularx}
+		\linebreak
+		\\
+		So, using these design factors, the tricycle style landing gear is more appropriate.
 
+	\subsection{Risk Matrix}
+		A risk matrix can be used to assess whether a risk is acceptable or not.\\
+		\textbf{INSERT PICTURE OF MATRIX}
+		Potential risks should be sourced from all disciplines, and then ranked by their severity and likelihood. Risks that are both severe and probable are unacceptable, while other risks may be mitigated or accepted.
+		
+	\subsection{Uncertainty in Measurement}
+		No continuous quantity is ever known exactly, and there are various types of uncertainty which prevent this. The three we currently care about are 
+		\begin{itemize}
+			\item Parameter Uncertainty
+			\item Statistical Uncertainty
+			\item Model Uncertainty
+		\end{itemize}
+		
+		\subsubsection{Parameter Uncertainty}
+			Many physical quantities will vary on each trial, things such as the tensile strength of a steel rod, the weight of a passenger, or the velocity of a vertical gust of wind. \\
+			This varience means we can't predict any individual outcome, but we can infer things from the distribution of past results. For example, the average weight of a passenger plus luggage is 100kg, or 95\% of steel rods exceed a load of 115MPa before breaking.\\
+			\\
+			If we have to infer something from past results then the type of uncertainty is parametric uncertainty.
+			
+		\subsubsection{Statistical Uncertainty}
+			Anytime something is measured there is some amount of random error. Repeated trails/ measurements can be used to increase our confidence in a result as it helps to eliminate this random error. It can often be difficult to know how much uncertainty is parametric and how much is statistical \\
+			\\
+			If repeat measurements can help improve the accuracy of our reslut, then the uncertainty is statistical.
+			
+		\subsubsection{Model Error}
+			All models include assumptions and approximations, such as neglecting air resistance in a projectiles calculation or using small angle approxiamtions in a pendulum. Understanding how much of a potential error this uncertainty can cause is down to engineering judgement. 
+			
+\newpage			
+			
+\section{Representing Data Samples}
+	One way of representing results is a frequency plot. For discrete data, each value can be represented, while if the data is continuous then it must be grouped into equally sized 'bins' first. This type of diagram is called a histogram.
+		
+	\subsection{Averages}
+		There are three different averages that we care about.
+		\begin{itemize}
+			\item[Mean -]$\mu =\frac{\sum x}{N}$ - The expected value
+			\item[Median -] The middle point. Found by ordering all points and then taking the centre value
+			\item[Mode -] The most frequent value
+		\end{itemize}
+		
+	\subsection{Spread}
+		To measure the spread of a set of data we can use the varience or the standard deviation.
+		\\
+		Varience is the average of the squared differences from the mean, and the standard deviation is the square root of the varience.
+		\\
+		These can be found using the equation below.
+		\\
+		\begin{align*}
+		\sigma ^2 &=\frac{\sum (X- \mu)^2}{N} 
+		\intertext{Where:} 
+		\sigma^2 &= \text{Varience} \\
+		\sigma &= \text{Standard Deviation} \\
+		X &= \text{Value} \\
+		\mu &= \text{Mean} \\
+		N &= \text{Number of Values}
+		\end{align*}		 
+		
 \end{document}

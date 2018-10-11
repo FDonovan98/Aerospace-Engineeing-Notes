@@ -1,0 +1,54 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+\title{Introduction to Materials}
+\date{}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction to Materials}
+
+\newpage
+
+\section{Tensile Testing}
+
+When performing tensile testing the extension is only measured from where the specimen thins. \\
+Specimen deformation is caused by the atomic layers slipping over each other.
+
+	\subsection{Load-Displacement Curve}
+		\textbf{PIC OF CURVE} \\
+		\\
+		After the elastic limit is reached the plot deviates from the elastic line, but the load still increases as the specimen deforms. This is because the specimen becomes harder to deform the more the material is strained. \\
+		As the specimen extends the cross sectional area decreases uniformally along the gauge length until a neck develops somewhere along this length. Once necking occurs the load required for deformation begins to drop. 
+	
+	\subsection{Stress - Strain Curve}
+		The load-displacement curve (F/$\sigma$) is usually converted to a 'nominal stress - nominal strain' curve, which uses engineering stress/ strain. \\
+		\begin{align*}
+			\sigma_{n'} &= \frac{F}{A_{o'}} \\
+			\epsilon_{n} &= \frac{(l-l_o)}{l_{o'}}
+			\intertext{Where:} 
+			\sigma_{n'} &= \text{Engineering stress} \\
+			\epsilon_{n} &= \text{Engineering strain} \\
+			A_{o'} &= \text{The original cross-sectional area} \\
+			l_o &= \text{Original length} \\
+			l &= \text{Length at any instant}		
+		\end{align*}
+		\\
+		
+		If a part exceeds its elastic limit, also known as yield stress ($\sigma_y$) then it's basically fucked, as it's begun to deform. This point is difficult to determine accurately, so a proof stress is often used. This is the stress required to cause a permenant deformation of 0.2\% ($\sigma_{0.2\%}$). \\
+		The ultimate tensile strength (UTS) or tensile strength ($\sigma_{TS}$) is the maximum stress that can be reached before the part fails and breaks. 
+		\subsubsection{The effect of temperature}
+			Increasing the strain rate or decreasing temperature can cause a transition from a ductile to a brittle failure, or visa versa.
+
+
+
+\end{document}
