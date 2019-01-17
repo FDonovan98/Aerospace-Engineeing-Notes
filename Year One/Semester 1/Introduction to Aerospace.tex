@@ -3,6 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{graphicx}
+
+\graphicspath{{"Figures: Intro To Aero/"}}
 
 \begin{document}
 
@@ -145,4 +148,208 @@
 			v&=\text{Kinematic Viscosity}
 		\end{align*}
 			
+\newpage
+
+\section{Moments}
+	There are two sources of drag. The first is surface/ skin friction drag, which is due to tangential stresses acting at the surface and is a direct result of a fluids viscosity. The other source is pressure drag, which is caused by pressure forces acting at the normal to that surface. There are three forms of pressure drag: form drag due to boundary layer growth; induced drag due to the formation of trailing vortex systems at the wing tips; and wave drag due to (sonic) shock formations at high speeds (speed of sound). \\
+	Form drag and profile drag both require a viscous fluid, while induced drag and wave drag do not and are a result of generated lift.
+	
+	\subsection{Profile Drag}
+		Profile drag is a combination of skin friction and form drag. \\
+		\\
+		Skin friction drag is caused by a tengential shear stress on a surface that opposed the aircrafts motion. The friction drag coefficient reduces with reynolds number, meaning it is higher for a turbulent flow than a laminar flow. \\
+		This friction causes the air very close to the surface to slow down, forming a boundary layer. This layer effectively changes the shape of the body by displacing the flow of air outwards. This leads to flow separation and the formation of a turbulent wake. If flow separates completely then the aircraft will stall as it no longer generates lift. \\
+		\\
+		This leads to a front-to-rear asymmetry in surface pressure, which leads to form drag. The form drag coefficient then increases as the wake size and lift generated increases. \\
+		\\
+		We want to minimise drag, however low form drag and low skin friction drag tend not to go together. The form drag can be reduced by having a thinner aerofoil, however this actually increases skin friction drag. The best solution is normally to compromise the thickness between the two types of drag. \\
+		\\
+		When we do any analysis we make the assumption that the coefficient of profile drag is constant for a specific shape. We know this isn't actually true, as it varies with the reynolds number, but at lower speeds (sub mach 1) its effect is minimal. 
+		\begin{align*}
+			C_{Dp} &= C_{Do} 
+			\intertext{Where:}
+			C_{Dp} &= \text{Coefficient of Profile Drag} \\
+			C_{Do} &= \text{Coefficient of profile drag under zero lift conditions}
+		\end{align*}
+		
+	\subsection{Induced Drag}
+		In 2D flows we only have to deal with profile drag, however in 3D flow we also have to deal with lift-induced drag, which is proportional to the lift squared.  A lifting wing sheds two counter-rotating vortices from its wingtips due to the high pressure air from the top of the wing and the low pressure air from underneath the wing meeting. These vortices have kinetic energy, meaning the wing is constantly transfering energy to the flow.
+		
+		\[\text{Rate of energy flow} = \text{Power} = \text{Force} * \text{Velocity} \propto \text{Drag} \]
+		
+		These tip vortices induce a downward (From leading edge to trailing edge) flow component, known as downwash, over the wing span. This rotates the local velocity vector downwards by a small angle, $\varepsilon$. This draws the lift vector rearward as the induced drag now makes up a component of the lift velocity.	
+		
+		\begin{align*}
+			C_{Di} &\propto C_L^2 \\
+			C_{Di} & KC_L^2
+			\intertext{Where:}
+			C_{Di} &= \text{Coefficient of Induced Drag} \\
+			C_L &= \text{Coefficient of Lift} \\
+			K &= \text{Induced Drag Factor}
+		\end{align*}
+		
+		To calculate the total drag:
+		
+		\begin{align*}
+			C_D &= C_{D_0} + KC_L^2
+			\intertext{Where:}
+			C_D &= \text{Coefficient of Drag} \\
+			C_{D_0} &= \text{Coefficient of Profile Drag} \\
+			KC_L^2 &= \text{Coefficient of Induced Drag}
+		\end{align*}
+		
+\newpage		
+		
+	\section{Pitching Moments}
+		\subsection{Centre of Pressure}
+			Lift ($L$) and drag ($D$) can be combined into a single resultant aerodynamic force ($R$). The line of action of $R$ crosses the chord-line at the centre of pressure ($x_{cp}$), meaning there is no pitching moment about this point. This would be super helpful, apart from the centre of pressure is not fixed and actually changes with the coefficent of lift ($C_L$) and hence with incidence. How much it varies depends on the camber of the wing. \\
+			\\
+			For a positive camber then a negative (nose down) pitching moment exists at zero lift. 
+			\[ \text{Moment} = \text{Lift} * \text{Centre of Lift} \]
+			The lift here is zero, so the Centre of Pressure (CP) must be infinately far behind the trailing edge. The CP moves forward towards the leading edge as the angle of attack increases, although $CP \geq 0.25*\text{Chord Length}$. \\
+			\\
+			This varying CP is a pain as it makes balance and stability calculations much more complicated. A fixed refrence point would be much more helpful, and one option for this is at the Leading Edge. We can resolve lift at CP into lift and pitching moment at LE, ignoring drag as it's so much smaller than lift. 
+			
+			\begin{align*}
+				C_{M_{LE}} &= C_{M_0} + \frac{\delta C_{M_{LE}}}{\delta C_L}C_L		
+			\end{align*}
+			
+			This still isn't super useful as the equation has a lot of unknowns. We can however use it to get the aerodynamic centre, which, for a 2D thin aerofoil, is at the quater chord point.
+			\begin{align*}
+				x_{ac} &= 0.25c 
+				\intertext{Where:}
+				x_ac &= \text{Aerodynamic Centre} \\
+				c &= \text{Chord Length}
+			\end{align*}	
+		
+\newpage
+
+\section{Straight and Level Flight}
+	
+	\begin{align*}
+		C_L &= \frac{L}{\frac{1}{2}\rho V^2 S} \\
+		C_D &= \frac{D}{\frac{1}{2}\rho V^2 S}
+		\intertext{Where:}
+		L &= \text{Lift Force} \\
+		D &= \text{Drag Force} \\
+		S &= \text{Surface Area of Wing} \\
+		V &= \text{Flow Speed (True Air Speed)}
+	\end{align*}			
+		
+		In straight and level flight there is no acceleration in any direction, the aircraft is in equilibrium. 
+		
+		\begin{align*}
+		L &= W \\
+		C_L &= \frac{L}{\frac{1}{2}\rho V^2 S} \\
+		&= \frac{W}{\frac{1}{2}\rho V^2 S} \\
+		&= \frac{w}{q}
+		\intertext{Where:}
+		W &= \text{Weight} \\
+		w &= \text{Wing Loading, $\frac{L}{S}$} \\
+		q &= \text{Dynamic Pressure, $\frac{1}{2}\rho V^2$}
+		\end{align*}
+		Using this equation, we can calculate flight speed required for straight and level flight.
+		\begin{align*}
+			V &= \sqrt{\frac{W}{\frac{1}{2}\rho SC_L}} \\
+			&= \sqrt{\frac{w}{\frac{1}{2}\rho C_L}}	
+		\end{align*}
+		
+		This means that we can reduce the speed required for straight and level flight by
+		\begin{itemize}
+			\item Reducing the wing loading by having a lighter aircraft or a larger wing
+			\item A higher $C_L$ by increasing the incidence angle $\alpha$. The minimal possible level flight speed occurs at $C_{Lmax}$, which is the point at which the aircraft will stall.
+			\item Increase the density $\rho$ by decreasing altitude
+		\end{itemize}
+		
+		\subsection{Equivalent Air Speed}
+		
+		These equations have all used the True Air Speed (TAS), which can be converted to the Equivalent Air Speed (EAS). This is the speed at standard sea level that would give the same aerodynamic loads on the aircraft (same $C_L$ etc.). This allows us to take calculations made at sea level and convert them to the required altitude. We can calculate the EAS using
+		
+		\begin{align*}
+			V_E &= V\sqrt{\sigma}
+			\intertext{Where:}
+			\sigma &= \text{Density Ratio}
+		\end{align*}
+		
+		EAS is also useful in flight as it's close to the Indicated Air Speed (IAS) that is read by the pilot from and Air Speed Indicator (ASI). \\
+		The ASI uses a pitot-static tube to measure dynamic pressure ($q$) directly. This works using the Bernoulli equation
+		
+		\[ p_{Pitot}-p_{static} = \frac{1}{2} \rho_0 V_E^2 \]
+		
+		The ASI measures the dynamic pressure as this is what the pilot is most concerned with as this is what affects the forces on the aircraft. A stall will always occur at the same EAS and structural limits are defined in terms of EAS.
+		
+		\subsection{Drag}
+			In equilibrium 
+			
+			\begin{align*}
+				T &= D \\
+				C_D &= \frac{D}{\frac{1}{2}\rho V^2 S} \\
+				&= \frac{T}{\frac{1}{2}\rho V^2 S}
+				\intertext{Where:}
+				T &= \text{Thrust} \\
+				D &= \text{Drag}
+			\end{align*}
+			
+			\subsection{Simpler Density Ratio}
+			
+				As the density ratio changes so much it makes performance calculations a pain. We can instead simplify our simplification, making it quicker to use
+				
+				\begin{align*}
+					\sigma &= \frac{\rho}{\rho_{sls}} \\
+					&\approx \frac{20-H}{20+H}
+					\intertext{Where:}
+					H &= \text{Altitude (km)}	
+				\end{align*}
+				
+\newpage		
+		
+\section{Variation of Drag}
+	By combining the basic equations for lift and drag we can obtain an expanded drag equation.
+	
+	\begin{align*}
+		C_D &= C_{D_0} + KC_L^2 \\
+		C_D &= \frac{D}{\frac{1}{2}\rho V^2S} \\
+		C_L &= \frac{W}{\frac{1}{2}\rho V^2S}		
+		\intertext{These are the basic equations}
+		\frac{D}{\frac{1}{2}\rho V^2S} &= C_{D_0} + KC_L^2 \\
+		D &= \frac{1}{2}C_{D_0}\rho V^2S + \frac{1}{2}KC_L^2\rho V^2S \\
+		D &= \frac{1}{2}C_{D_0}\rho V^2S + \left(\frac{1}{2}K\rho V^2S\right)\left(\frac{W}{\frac{1}{2}\rho V^2S}\right)^2 \\
+		D &= \frac{1}{2}C_{D_0} \rho V^2S + \frac{KW^2}{\frac{1}{2}\rho V^2S}
+		\intertext{This equation can be written in a much neater form of}
+		D &= AV^2 + \frac{B}{V^2}
+		\intertext{Where:}
+		A &= \frac{1}{2}C_{D_0} \rho S \\
+		B &= \frac{KW^2}{\frac{1}{2}\rho S}
+	\end{align*}
+	
+	A and B are a function of density, thus altitude. A is the multiplier for the profile drag, while B is the multiplier for induced drag.
+	
+	\subsection{Drag Curves}
+	
+	\begin{figure}[h!]
+		\includegraphics[width=\textwidth]{"Drag Curve"}
+		\caption{Drag Curve}
+		\label{Drag Curve}
+	\end{figure}
+	
+	By combining zero-lift drag and induced drag we can get a minimum drag speed ($V_{MD}$). This is the most efficient speed for cruising as the minimum amount of energy is being lost as drag. \\
+	\\
+	At low speeds, such as during take-off, landing, and dog fighting, a majority of the drag present comes from induced drag ($\frac{B}{V^2}$). \\
+	At high speeds, such as during cruising, the profile drag ($AV^2$) is the main source of drag. \\
+	\\
+	As the altitude increases and density decreases the drag curve for an aircraft is shifted to the right. This has the effect of increasing the minimum drag speed ($V_{MD}$) and increasing the stall speed ($V_{stall}$). The minimum drag ($D_{min}$) stays constant however.
+	
+	\subsection{Minimum Drag}
+		Minimum drag occurs when $\frac{\delta D}{\delta V} = 0$. If we differentiate the expanded drag equation with respect to $V$ we get
+		\begin{align*}
+			\frac{\delta D}{\delta V} &= \frac{1}{2} *2 C_{D_0}\rho VS - \frac{2KW^2}{\frac{1}{2}\rho V^3S} 
+			\intertext{We want a minimum so}
+			0 &= C_{D_0}\rho V - \frac{4KW^2}{\rho V^3S} \\
+			C_{D_0}\rho V &= \frac{4KW^2}{\rho V^3S} \\
+			C_{D_0}\rho^2 V^4 S^2 &= 4KW^2 \\
+			V^4 &= \frac{4KW^2}{C_{D_0}\rho^2S^2} \\
+			V_{MD} &= \sqrt{\frac{2W\sqrt{K}}{\rho S \sqrt{C_{D_0}}}} 
+		\end{align*}
+		
+		
 \end{document}

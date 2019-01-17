@@ -1,9 +1,14 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{graphicx}
+
+\newcommand{\lnn}[1]{\ln\left(#1\right)}
+
+\graphicspath{{"Figures: Intro To Materials/"}}
 
 \begin{document}
-
 
 \title{Introduction to Materials}
 \date{}
@@ -15,7 +20,52 @@
 
 \newpage
 
-\section{Introduction to Materials}
+\section{Stress and Strain}
+	Stress is the force acting on a surface divided by the area. It is equivalent to pressure. \\
+	\\
+	Strain is the relative change in shape or size of an object, due to stress.
+	
+\newpage
+
+\section{Elastic and Plastic Behaviour}
+	\subsection{Elastic Behaviour}
+		Elastic behaviour is when a solid object deformed by an applied stress returns to its original shape and dimensions when the stress is removed. \\
+		\\
+		For many materials when elastic deformation occurs, the load is very nearly proportional to the extension of the object. This relationship is known as hooks law.
+		\begin{align*}
+			F&=kx
+			\intertext{Where:}
+			F &= \text{Force} \\
+			k &= \text{Constant Dependant on Material}
+			x &= \text{Extension}
+		\end{align*}
+		
+		The elastic modulus is a measure of the stiffness of a solid material. This is more n ormally known as Young's Modulus. 
+		
+		\begin{align*}
+			E &=\frac{\sigma}{\varepsilon}
+			\intertext{Where:}
+			E &= \text{Young's Modulus} \\
+			\sigma &= \text{Stress} \\
+			\varepsilon &= \text{Strain}
+		\end{align*}
+
+		Th elastic properties of any material can be defined using the Young's Modulus ($E$), Shear Modulus ($G$), Bulk Modulus ($-K$) and Poisson's Ratio ($v$). These properties are based on the atomic structure of the material.
+		
+		\begin{align*}
+			\tau &= G \gamma \\
+			-K &= \frac{P}{\Delta} \\
+			v &= \frac{-\varepsilon_v}{\varepsilon_n}
+			\intertext{Where:}
+			\tau &= \text{Shear Stress} \\
+			\gamma &= \text{Shear Strain} \\
+			P &= \text{Shrinkage} \\
+			\Delta &= \text{Volume Strain} \\
+			\varepsilon_v &= \text{Lateral Strain} \\
+			\varepsilon_n &= \text{Tensile Strain} \\			
+		\end{align*}
+		
+		As a note, lateral strain is strain in the same direction as the stress, while tensile strain is parallel to stress. Strains are positive for extensions and negative for contractions, so a minus sign is added to give a positive Poisson's ratio.
 
 \newpage
 
@@ -25,8 +75,13 @@ When performing tensile testing the extension is only measured from where the sp
 Specimen deformation is caused by the atomic layers slipping over each other.
 
 	\subsection{Load-Displacement Curve}
-		\textbf{PIC OF CURVE} \\
-		\\
+	
+		\begin{figure}[h!]
+			\includegraphics[width=\linewidth]{"Load-Elongation Curve"}
+			\caption{Load-Discplacement Curve}
+			\label{LDCurve}
+		\end{figure}
+		
 		After the elastic limit is reached the plot deviates from the elastic line, but the load still increases as the specimen deforms. This is because the specimen becomes harder to deform the more the material is strained. \\
 		As the specimen extends the cross sectional area decreases uniformally along the gauge length until a neck develops somewhere along this length. Once necking occurs the load required for deformation begins to drop. 
 	
@@ -47,8 +102,91 @@ Specimen deformation is caused by the atomic layers slipping over each other.
 		If a part exceeds its elastic limit, also known as yield stress ($\sigma_y$) then it's basically fucked, as it's begun to deform. This point is difficult to determine accurately, so a proof stress is often used. This is the stress required to cause a permenant deformation of 0.2\% ($\sigma_{0.2\%}$). \\
 		The ultimate tensile strength (UTS) or tensile strength ($\sigma_{TS}$) is the maximum stress that can be reached before the part fails and breaks. 
 		\subsubsection{The effect of temperature}
-			Increasing the strain rate or decreasing temperature can cause a transition from a ductile to a brittle failure, or visa versa.
+			Increasing the strain rate or decreasing temperature can cause a transition from a ductile to a brittle failure, and visa versa. For example, iron is ductile at room temperature, but at -200\degree C it is brittle.
 
+		\subsubsection{Engineering Vs True Stress - Strain}
+			The decline shown on figure \ref{LDCurve} would seem to indicate that the material becomes weaker, however due to a process known as strain hardening, the material actually becomes stronger. \\
+			The decline occurs because the cross-sectional area rapidly decreases within the neck region, reducing the load bearing capacity of the specimen. 
+			
+			\begin{align*}
+				\sigma_T &= \frac{F}{A_i}
+				\intertext{Where:}
+				\sigma_T &= \text{True Stress} \\
+				F &= \text{Load} \\
+				A_i &= \text{Instantaneous Cross-Sectional Area} \\
+				\\
+				\varepsilon_T &= \lnn{\frac{l_i}{l_o}}
+				\intertext{Where:}
+				\varepsilon&=\text{True Strain} \\
+				l_i &= \text{Instantaneous Length} \\
+				l_o &= \text{Original Length}
+			\end{align*}								
+			Assuming there is no volume change during deformation then True Stress/ Strain and Engineering Stress/ Strain are related by
+			
+			\begin{align*}
+				\sigma_T&=\sigma(1+\varepsilon) \\
+				\varepsilon&=\lnn{1+\varepsilon}
+			\end{align*}
+			
+	\subsection{Ductility}
+		Ductility is the measure how much plastic deformation has occured at fracture. If there is little to no plastic deformation then the it is a brittle fracture. It can be expressed either as Percent Elongation, or as Percent Reduction in Area.
+		
+		\begin{align*}
+			\%EL &= \frac{l_f-l_o}{l_o}*100
+			\intertext{Where:}
+			\%EL &= \text{Percent Elongation} \\
+			l_f &= \text{Fracture Length} \\
+			l_o &= \text{Original gague length}\\
+			\\
+			\\
+			\%RA &=\frac{A_o-A_f}{A_o}*100
+			\intertext{Where:}
+			\%RA &=\text{Percent Reduction in Area} \\
+			A_o &= \text{Original Cross-Sectional Area} \\
+			A_f &= \text{Cross-Sectional Area at Fracture}			
+		\end{align*}					
+			
+		Knowing the ductility of a material is important as it indicated how much plastic deformation can occur before fracture, and the degree of allowable deformation before fracture.
+		
+\newpage
 
+\section{Toughness and Hardness Testing}
+	\subsection{Toughness}
+		Toughness is the measure of the amount of energy that a material can absorb before fracturing. The energy absorbed by a specimen before fracture can be found from the load/ deformation curve.
+		
+		\begin{align*}
+			\text{Toughness} &= \int_{0}^{\varepsilon^*} \sigma \quad  \delta \varepsilon
+			\intertext{Where:}
+			\text{Toughness} &= \frac{J}{m^3} \\
+			\varepsilon &= \text{Strain} \\
+			\sigma &= \text{Stress} \\
+			\varepsilon^* &= \text{Strain at Fracture}
+		\end{align*}
 
+		In General, ductile materials are able to absorb more energy before fracture than brittle ones, so have a higher toughness.
+		
+		\subsubsection{Measuring Toughness}
+			There are two main tests to measure toughness, Izod and Charpy. Both tests involve striking a notched specimen with a swinging pendulum which is released from a known height. The energy absorbed by the specimen is measured by recording how far the pendulum moves after hitting the specimen, regardless of if the specimen broke or not.  \\
+			\\
+			The recorded impact toughness is dependant upon
+			\begin{enumerate}
+				\item The rate at which energy is applied
+				\item The specimen size
+				\item The notch configuration (i.e. crack initiation)
+			\end{enumerate}
+
+			As there parameters can be difficult to predict or control in the real world the impact test is best used for comparison and selection of materials. 
+			
+	\subsection{Hardness}
+		Hardness is a measure of a materials resistance to permenant deformation. 
+		
+		\subsubsection{Measuring Hardness}		
+		Early methods involved the Mohs scale, where one material was scratched with another, while modern methods involve pressing a standardised indenter into the material using a known force. The indenter used is often a diamond tipped pyramid or cone, for an example see the Vickers Hardness Test.
+		
+		 \subsubsection{Hardness and Tensile Strength}
+		 	Both tensile strength and hardness are indicators of a metals resistance to plastic deformation and can be considered roughly proportional. However, this doesn't hold true for all metals, and for most steels, Hardness (HB) and tensile strength are related by
+		 	
+		 	\[\sigma_{TS}=3.45HB \]
+			
+			
 \end{document}
