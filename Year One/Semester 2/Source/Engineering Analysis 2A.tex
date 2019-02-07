@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath}
+
+\newcommand{\abs}[1]{\lvert#1\rvert}
+
+\begin{document}
+
+\title{Engineering Analysis 2A}
+\date{}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{other}
+    Polar vectors can use base axis as angle or take an angle relative to a previous point. \\
+    Left hand axis z-axis is facing away from you, right hand is facing towards. \\ 
+    body is rotating with angular velocity $\vec{\omega}=[\omega_x,\omega_y,\omega_z]$. Find its velocity at the point $\vec{r}=[x,y,z]$. \\
+    The point is rotating along a circle with radius $\rho=rsin\theta$. \\
+    \textbf{IMAGE VECTOR LECTURE 3}
+
+\newpage
+
+\section{3D Vectors and Operations}
+    \subsection{Cross Product}
+        $\abs{a\times b} = \abs{a}\abs{b}sin\theta$ where $\theta$ is the angle between $a$ and $b$ \\
+        \\
+        Cross product of vectors is equivalent to cross product of matrices as you can write vectors as matrices.
+
+    \subsection{Scalar Triple Product}
+        Acalar triple product is scalar quantity defined as $a\cdot(b\times c)$. It represents calculating the determinant.
+        \[
+            a\cdot(b\times c)=(a_xi+a_yj+a_zk)\cdot\begin{vmatrix}
+            i&j&k \\
+            b_x&b_y&b_z \\
+            c_x&c_y&c_z
+        \end{vmatrix}
+        \]
+
+\end{document}
