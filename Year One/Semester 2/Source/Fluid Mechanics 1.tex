@@ -45,5 +45,38 @@
                 \item[Microscopic - ] Deals with a specific section of the flow (properties of the fluid flow within a small section of this pipe)
             \end{itemize}
 
+\section{Energy Balance}
+    \subsection{Simplified Energy Balance - Bernoulli Equation}
+        Bernoullis equations assumes there is no energy loss or gain in the system. \\
+        There are six assumptions that have to be true for bernoullis equation to be applicable.
+        \begin{enumerate}
+            \item Uniform velocity profile
+            \item No frictional losses
+            \item No mechanical shaft work (so no pumps or turbines)
+            \item Steady state
+            \item Incompressible flow
+            \item No chemical reactions
+        \end{enumerate}
+
+        \[e_{total}=e_{kinetic}+e_{potential}+e_{flow}\]
+
+        \begin{align}
+            KE&=\frac{1}{2}\rho Vv^2 \\
+            PE&=\rho Vhg \\
+            e_{flow}&=PV
+        \end{align}
+
+        \begin{align}
+            \frac{1}{2}\rho_1 V_1 v_1^2+\rho_1V_1h_1g+P_1V_1&=\frac{1}{2}\rho_2V_2v^2_2+\rho_2V_2h_2g+P_2V_2 \\
+            \rho_1 &= \rho_2 \text{ as incompressible fluid} \\
+            V_1&=V_2 \text{ as mass is conserved in a closed system and density is fixed} \\
+            \frac{1}{2}\rho v^2_1+\rho h_1g+P_1&=\frac{1}{2}\rho v^2_2+\rho h_2g+P_2
+        \end{align}
+
+    \subsection{Full Energy Balance for Incompressible Fluids}
+        The molecules of a fluid experience cohesive forces and collisions between each other. These are linked to viscosity, which leads to viscous energy losses in flows ($l_v$). Work done by a shaft ($W_s$) is negative for a device that pulls energy out of the system, such as a turbine, and positive for a device that adds energy to the system, such as a pump.
+        \[\frac{1}{2}\rho v^2_1+\rho h_1g+P_1&-\frac{1}{2}\rho v^2_2-\rho h_2g-P_2+\delta W_s-l_s=0\]
+        \\
+        In hydrostatic problems $v_1=v_2=\delta W_s=l_v=0$. So, $P_1-P_2=\rho g\Delta h$. This is known as Stevino's Law.
 
 \end{document}
