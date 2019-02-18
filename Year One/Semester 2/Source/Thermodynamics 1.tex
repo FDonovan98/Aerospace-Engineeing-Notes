@@ -1,0 +1,110 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Thermodynamics 1}
+\date{}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Energy, Energy Transfer and General Energy Analysis}
+    \subsection{Types of Energy}
+        The sum of all energies in a system is called Total Energy ($E$). This includes the macroscopic and internal (microscopic) energy. \\
+        Total energy per unit mass of a system is
+        \[e=\frac{E}{m}\]
+
+        Macroscopic forms of energy are those possessed by the system relative to an external frame of refrence, such as kinetic energy or potential energy. \\
+        \\
+        Internal or microscopic forms of energy is related to the molecular structure of the system. This includes the latent energy (phase change,), sensible energy (temperature change) and chemical or nuclear energy. \\
+        \\
+        Kinetic Energy (KE)
+        \begin{align}
+            KE&=m\frac{V^2}{2} \\
+            \intertext{Where:}
+            m &= \text{mass} \nonumber \\
+            V&=\text{Velocity} \nonumber
+        \end{align}
+
+        Potential Energy (PE)
+        \begin{align}
+            PE&=mgz \\
+            \intertext{Where:}
+            m&=\text{mass} \nonumber \\
+            g&=\text{gravity} \nonumber \\
+            z&=\text{height} \nonumber 
+        \end{align}
+
+        Flow Energy
+        \begin{align}
+            FE &=m\frac{p}{\rho} \\
+        \end{align}
+
+    \subsection{mechanical Energy}
+        This is a form of energy which can be converted directly and completely to mechanical work using an ideal (lossless) mechanical device. Kinetic and potential energies are both mechanical energies, while thermal energy would not be due to the second law of thermodynamics. \\
+        \\
+        The mechanical energy of a flowing fluid per unit mass can be calculated by summing the flow energy kinetic energy, and potential energy of the fluid. \\
+        \\
+        Volume Flow Rate ($\dot{V}$)
+        \[\dot{V}=V_{avg}A_C\]
+        \\
+        Mass Flow Rate ($\dot{m}$)
+        \[\dot{m}=\rho \dot{V}\]
+        \\
+        Energy Flow Rate ($\dot{E}$)
+        \[\dot{E}=\dot{m}e\]
+        \\
+        Therefore, the flowrate of mechanical energy could be written as 
+        \[\dot{E_{mech}}=\dot{m}e_{mech}\]
+        This  assumes the fluid flow is incompressible, so that $\rho$ is constant. \\
+        \\
+        As energy can be neither created nor destroyed, if $\Delta e_{mech}>0$ then work has been supplied to the fluid, while if $\Delta e_{mech}<0$ then work has been extracted from the fluid.\\
+        This means that the maximum power generated in an ideal system is 
+        \[\dot{W_{max}}=\dot{m} \Delta e_{mech}\]
+        \[\Delta e_{mech}=\frac{P_2-P_1}{\rho}+\frac{V^2_2-V^2_1}{2}+g(z_2-z_1)\]
+        \\
+        When $\Delta e_{mech} =0$ we know that it is a steady, incompressible flow. 
+
+    \subsection{Bernoulli Equation}
+        \[\frac{P}{\rho}+\frac{V^2}{2}+gz=\text{constant (along a streamline)}\]
+        The Bernoulli equation is an approximate relation between pressure, velocity, and elevation for fluid particles along a streamline. It is only valid in regions of steady, incompressible flow where net frictional forces are negligible.
+        
+\newpage
+
+\section{Energy Analysis of Closed Systems}
+
+\newpage
+
+\section{Pure Substances and Phase Change}
+
+\newpage
+
+\section{Energy and Mass Analysis of Steady Flow Control Volumes}
+
+\newpage
+
+\section{Vapour-Compression Cycle}
+
+\newpage
+
+\section{Energy Analysis of Steady flow devices}
+
+\newpage
+
+\section{Refrigerators, Heat Pumps and Air Conditioners}
+
+\newpage
+
+\section{Brayton Cycle, Jet engine analysis}
+
+\newpage
+
+\section{Refrigerator Cycle Analysis}
+
+\end{document}
