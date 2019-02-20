@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{article}
 
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -55,11 +56,45 @@
         Regardless of the complexity of the distribution of external forces at a small region on the surface of a body, the resulting effect a small distance away depends only on the statically equivalent force. \\
         Results in stress concentrations in a material, rather than uniform stress distribution. \\
 
-    \subsection{Forces}
+    \subsection{Stress}
         Stress is the amount of internal force per unit area:
         \[\sigma = \frac{F}{A}\]
         and can be either tensile or compressive. \\
         \\
         The force acting on an area can be normal or tangentail to the area. The direct stress ($\sigma"$) is the normal force per unit area, while shear stress ($\tau$) is the tangential force per unit area.
+
+    \subsection{Temperature Stresses}
+    \begin{align}
+        \epsilon_T&=\alpha \Delta T \\
+        \Delta L_T&= \alpha \Delta TL \\
+        \intertext{Where: }
+        \epsilon_T&=\text{Thermal strain} \nonumber\\
+        \alpha &= \text{Thermal coefficient} \nonumber\\
+        T&=\text{Temperature} \nonumber\\
+        \Delta L_T &=\text{Change in length due to thermal expansion} \nonumber\\
+        L&=\text{Original length} \nonumber
+    \end{align}
+
+    Thermal stress doesn't cause any strain, unless the expansion is restricted by a support or constraint. The general procedure for solving problems of thermal stress is: 
+    \begin{enumerate}
+        \item Remove one of the constrainst and assume the body can extend or contract freely
+        \item Calculate $\Delta L_T$
+        \item Calculate the force required to return the body to its original length
+    \end{enumerate}
+    \begin{align}
+        \Delta L_F=\frac{FL}{AE}
+        \intertext{Where: }
+        \Delta L_F&=\text{Change in length due to force applied} \nonumber\\
+        F&=\text{Force} \nonumber\\
+        L&=\text{Original length} \nonumber \\
+        A&=\text{Cross sectional area} \nonumber\\
+        E&=\text{Young's modulus} \nonumber
+    \end{align}
+
+    \subsection{Strain Energy}
+        When a material is deformed the work done by external forces is stored as elastic strain energy within the material. 
+        \[W=\int F\delta l = \int \sigma Al \delta \epsilon=V\int \sigma \delta \epsilon\]
+        The strain energy per unit volume ($w$) is the area under the stress-strain graph
+        \[w=\int \sigma \epsilon \delta \epsilon\]
 
 \end{document}
