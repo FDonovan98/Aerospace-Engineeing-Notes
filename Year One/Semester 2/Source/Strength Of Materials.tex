@@ -65,10 +65,10 @@
 
     \subsection{Temperature Stresses}
     \begin{align}
-        \epsilon_T&=\alpha \Delta T \\
+        \varepsilon_T&=\alpha \Delta T \\
         \Delta L_T&= \alpha \Delta TL \\
         \intertext{Where: }
-        \epsilon_T&=\text{Thermal strain} \nonumber\\
+        \varepsilon_T&=\text{Thermal strain} \nonumber\\
         \alpha &= \text{Thermal coefficient} \nonumber\\
         T&=\text{Temperature} \nonumber\\
         \Delta L_T &=\text{Change in length due to thermal expansion} \nonumber\\
@@ -81,20 +81,37 @@
         \item Calculate $\Delta L_T$
         \item Calculate the force required to return the body to its original length
     \end{enumerate}
+
+    \subsection{Force Stress}
+
     \begin{align}
-        \Delta L_F=\frac{FL}{AE}
+        \Delta L_F&=\frac{FL}{AE} \\
+        \intertext{Or}
+        \Delta L_F&=\sigma \frac{L}{E}
         \intertext{Where: }
         \Delta L_F&=\text{Change in length due to force applied} \nonumber\\
+        \sigma &=\text{Stress} \nonumber\\
         F&=\text{Force} \nonumber\\
         L&=\text{Original length} \nonumber \\
         A&=\text{Cross sectional area} \nonumber\\
         E&=\text{Young's modulus} \nonumber
     \end{align}
 
+    \subsection{Poisson's Ration}
+        When there is a direct stress along a beam in one direction this results in a direct strain in the same direction as well as a lateral strain, so a strain acting perpendicular to the direction of stress. The relationship between direct and lateral strain is given by Poisson's coefficient ($v$), and is usually 0.3.
+
+        \begin{align}
+            v&=-\frac{\varepsilon_2}{\varepsilon_1}
+            \intertext{Where:}
+            v &=\text{Poisson's Ration} \nonumber\\
+            \varepsilon_2&=\frac{\Delta d}{d} \nonumber\\
+            \varepsilon_1&=\frac{\Delta l}{l} \nonumber
+        \end{align}
+
     \subsection{Strain Energy}
         When a material is deformed the work done by external forces is stored as elastic strain energy within the material. 
-        \[W=\int F\delta l = \int \sigma Al \delta \epsilon=V\int \sigma \delta \epsilon\]
+        \[W=\int F\delta l = \int \sigma Al \delta \varepsilon=V\int \sigma \delta \varepsilon\]
         The strain energy per unit volume ($w$) is the area under the stress-strain graph
-        \[w=\int \sigma \epsilon \delta \epsilon\]
+        \[w=\int \sigma \varepsilon \delta \varepsilon\]
 
 \end{document}

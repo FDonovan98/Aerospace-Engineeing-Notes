@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{article}
 
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -35,21 +36,23 @@
 
     \newpage
 
-    \section{Basic Characteristics of Fluids and Flows}
-        \subsection{The Continuum Assumption}
-            Fluids are considered a continuum on length scales larger than the molecular ones. For example, you can't measure individual water 'grains' until you look at the molecular level.
-        
-        \subsection{Types of Problems}
-            \begin{itemize}
-                \item[Macroscopic - ] Deals with the overall flow (e.g amount of water entering and leaving a pipe)
-                \item[Microscopic - ] Deals with a specific section of the flow (properties of the fluid flow within a small section of this pipe)
-            \end{itemize}
+\section{Basic Characteristics of Fluids and Flows}
+    \subsection{The Continuum Assumption}
+        Fluids are considered a continuum on length scales larger than the molecular ones. For example, you can't measure individual water 'grains' until you look at the molecular level.
+    
+    \subsection{Types of Problems}
+        \begin{itemize}
+            \item[Macroscopic - ] Deals with the overall flow (e.g amount of water entering and leaving a pipe)
+            \item[Microscopic - ] Deals with a specific section of the flow (properties of the fluid flow within a small section of this pipe)
+        \end{itemize}
+
+\newpage
             
 \section{Conservation Laws}
     Mass
     \[\frac{\delta V}{\delta t}=v_1A_1-v_2A_2\]
     Energy
-    \[\frac{1}{2}v^2_1+gh_1+\frac{p_1}{\rho}-\frac{1}{2}*v^2_2-gh_2-\frac{p_2}{\rho}-l_v+\delta W_s=0 \]
+    \[\frac{1}{2}v^2_1+gh_1+\frac{p_1}{\rho}-\frac{1}{2}v^2_2-gh_2-\frac{p_2}{\rho}-l_v+\delta W_s=0 \]
     Momentum
     \[\rho Q_1\vec{v_1}-\rho Q_2\vec{v_2}+p_1+A_1-p_2A_2+\int_{1}^{2}\rho g \delta V -\vec{F}=\vec{0}\]
 
@@ -70,23 +73,63 @@
 
         \[e_{total}=e_{kinetic}+e_{potential}+e_{flow}\]
 
-        \begin{align}
+        \begin{align*}
             KE&=\frac{1}{2}\rho Vv^2 \\
             PE&=\rho Vhg \\
+            P&=\rho gh \\
             e_{flow}&=PV
-        \end{align}
+        \end{align*}
 
-        \begin{align}
+        \begin{align*}
             \frac{1}{2}\rho_1 V_1 v_1^2+\rho_1V_1h_1g+P_1V_1&=\frac{1}{2}\rho_2V_2v^2_2+\rho_2V_2h_2g+P_2V_2 \\
             \rho_1 &= \rho_2 \text{ as incompressible fluid} \\
-            V_1&=V_2 \text{ as mass is conserved in a closed system and density is fixed} \\
+            V_1&=V_2 \text{ mass conserved in closed system} \\
+            & \\
             \frac{1}{2}\rho v^2_1+\rho h_1g+P_1&=\frac{1}{2}\rho v^2_2+\rho h_2g+P_2
-        \end{align}
+        \end{align*}
 
     \subsection{Full Energy Balance for Incompressible Fluids}
         The molecules of a fluid experience cohesive forces and collisions between each other. These are linked to viscosity, which leads to viscous energy losses in flows ($l_v$). Work done by a shaft ($W_s$) is negative for a device that pulls energy out of the system, such as a turbine, and positive for a device that adds energy to the system, such as a pump.
-        \[\frac{1}{2}\rho v^2_1+\rho h_1g+P_1&-\frac{1}{2}\rho v^2_2-\rho h_2g-P_2+\delta W_s-l_s=0\]
+        \[\frac{1}{2}\rho v^2_1+\rho h_1g+P_1-\frac{1}{2}\rho v^2_2-\rho h_2g-P_2+\delta W_s-l_v=0\]
         \\
         In hydrostatic problems $v_1=v_2=\delta W_s=l_v=0$. So, $P_1-P_2=\rho g\Delta h$. This is known as Stevino's Law.
+
+\newpage
+
+\section{Commercial Pipes}
+    Real world pipes are not perfectly smooth, and have an amount of roughness on their inner diameter. This is very important when transporting fluids long distances as the frictional losses can be signigicant. \\
+    The roughness ($k$) of a pipe is the average difference in height between a trough and a peak on the interior wall of the pipe. The relative roughness is
+    \[\text{Relative Roughness }=\frac{k}{D}\]
+    where ($D$) is the inner diameter of the pipe. \\
+    \\
+    There are several steps you should go through when evaluating the distribution of losses
+    \begin{enumerate}
+        \item Determine the Reynolds Number 
+        \item Determine the relative roughness
+        \item Depending on the flow regime use the correct formula or use the Moody Chart
+        \item Use the correct formula to determine the friction factor
+        \item Evaluate the viscous losses \\
+    \end{enumerate} 
+
+    \noindent To calculate the reynold number we use the formula
+    \begin{align}
+        Re&=\frac{\rho v D}{\mu} \\
+        \intertext{Where: }
+        \mu &=\text{Viscosity of the Fluid} \nonumber
+    \end{align}
+    To calculate the friction factor ($f$) we can use two differet formulas, one for laminar flow ($Re<2100$)
+    \[f=\frac{16}{Re}\]
+    And the Colebrook formula for turbulent flows ($4000<Re<10^5$)
+    \[\frac{1}{\sqrt{f}}=4log_{10}\left(\frac{k}{D}+\frac{4.67}{Re\sqrt{f}}\right)+2.28\]
+    For ($2100<Re<4000$) this is the transition region, and no empirical relations are available to calculate the friction factor. We will not be dealing with any flows in this region. \\
+    \\
+    To calculate the  viscous losses we use 
+    \[l_v=2fv^2\frac{L}{D}\]
+
+    \subsection{Local (Minor) Viscous Losses}
+        The equations only calculate the losses that occur in a straight pipe, however there's normally more to a system than just a straight pipe. Things like valves, corners, and junctions all create local viscous losses. These losses can be calculated using
+        \[l_v=\frac{1}{2}v^2K_f\]
+        where ($K_f$) is a coefficient dependant on the cause of the local visocus loss. Values for ($K_f$) can be found in "Perry's Chemical Engineering Handbook" or in other similar manuals on fluid mechanics.
+
 
 \end{document}
