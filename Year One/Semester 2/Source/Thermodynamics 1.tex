@@ -25,30 +25,30 @@
         Internal or microscopic forms of energy is related to the molecular structure of the system. This includes the latent energy (phase change,), sensible energy (temperature change) and chemical or nuclear energy. \\
         \\
         Kinetic Energy (KE)
-        \begin{align}
+        \begin{align*}
             KE&=m\frac{V^2}{2} \\
             \intertext{Where:}
-            m &= \text{mass} \nonumber \\
-            V&=\text{Velocity} \nonumber
-        \end{align}
+            m &= \text{mass}  \\
+            V&=\text{Velocity} 
+        \end{align*}
 
         Potential Energy (PE)
-        \begin{align}
+        \begin{align*}
             PE&=mgz \\
             \intertext{Where:}
-            m&=\text{mass} \nonumber \\
-            g&=\text{gravity} \nonumber \\
-            z&=\text{height} \nonumber 
-        \end{align}
+            m&=\text{mass}  \\
+            g&=\text{gravity}  \\
+            z&=\text{height}  
+        \end{align*}
 
         Flow Energy
-        \begin{align}
+        \begin{align*}
             FE &=m\frac{p}{\rho} \\
             \intertext{Where: }
-            m&=\text{mass} \nonumber \\
-            p&=\text{pressure} \nonumber \\
-            \rho&=\text{density} \nonumber
-        \end{align}
+            m&=\text{mass}  \\
+            p&=\text{pressure}  \\
+            \rho&=\text{density} 
+        \end{align*}
 
     \subsection{mechanical Energy}
         This is a form of energy which can be converted directly and completely to mechanical work using an ideal (lossless) mechanical device. Kinetic and potential energies are both mechanical energies, while thermal energy would not be due to the second law of thermodynamics. \\
@@ -77,25 +77,52 @@
 
     \subsection{Bernoulli Equation}
         \[\frac{P}{\rho}+\frac{V^2}{2}+gz=\text{constant (along a streamline)}\]
-        The Bernoulli equation is an approximate relation between pressure, velocity, and elevation for fluid particles along a streamline. It is only valid in regions of steady, incompressible flow where net frictional forces are negligible.
+        The Bernoulli equation is an approximate relation between pressure, velocity, and elevation for fluid particles along a streamline. It is only valid in regions of steady, incompressible flow where net frictional forces are negligible. \\
+        \\
+        This equation is usually in the form
+        \[\frac{1}{2}\rho v^2 + \rho gh + P = constant\]
+        So
+        \[\frac{1}{2}\rho_1 v_1^2 + \rho_1 g_1h_1 + P_1 = \frac{1}{2}\rho_2 v_2^2 + \rho_2 g_2h_2 + P_2\]
         
 \newpage
 
-\section{Energy Analysis of Closed Systems}
+\section{Energy Analysis of a Closed Systems}
     \begin{itemize}
         \item[$C_v$ -] Specific heat capacity at a fixed volume
         \item[$C_p$ -] Specific heat capacity at a fixed pressure 
     \end{itemize}
     $C_p$ is always higher than $C_v$. \\
 
-    \begin{align}
+    \begin{align*}
         \Delta u&=C_v(T_1-T_2) \\
         \intertext{Where: }
-        \Delta u&=\text{ Change in internal energy} \nonumber \\
-        C_v&=\text{ Specific heat capacity with fixed volume} \nonumber \\
-        T_1&=\text{ Initial temeprature} \nonumber\\
-        T_2&=\text{ Final temperature} \nonumber
-    \end{align} 
+        \Delta u&=\text{ Change in internal energy}  \\
+        C_v&=\text{ Specific heat capacity with fixed volume}  \\
+        T_1&=\text{ Initial temeprature} \\
+        T_2&=\text{ Final temperature} 
+    \end{align*} 
+
+    \subsection{Energy Balance Equation in a Single Inlet Outlet System}
+        \begin{align*}
+            \dot{Q}-\dot{W}&=\dot{m}\left(h_2-h_1 + \frac{v_2^2-v_1^2}{2}+g(z_2-z_1)\right)
+            \intertext{Where:}
+            \dot{Q} &= \text{Change in thermal energy} \\
+            \dot{W} &= \text{Work done} \\
+            \dot{m} &= \text{Mass flow rate} \\
+            h &= \text{Enthalpy energy} \\
+            v &= \text{Velocity} \\
+            g &= \text{Gravity} \\
+            z &= \text{Height}
+        \end{align*}
+        
 \newpage
 
+\section{Energy and Mass Analysis of Steady Flow Control Volumes}
+    Brayton cycle dals with external combustion in a gas turbine, such as a jet engine. When analysis a complex system it's best to break it up into its sections, such as the intake, compressor, combustion chamber, turbine and nozzle in a jet engine. 
+
+    \subsection{Nozzles and Diffusers}
+        A nozzle increases the velocity of the fluid by decreasing the pressure. A diffuser does the exact opposite, increasing the pressure by slowing the fluid down. \\
+        \\
+        In these systems we can assume there is no work done ($\dot{W}=0$), negligible change in potential energy ($\Delta pe = 0$), and can often assume there is negligible heat transfer ($\dot{Q} = 0$). \\
+        This leaves us with only enthalpy and kinetic energy.
 \end{document}
